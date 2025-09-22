@@ -30,6 +30,29 @@
   </header>
 
   <main class="container">
+    <section id="explore" aria-labelledby="explore-title">
+  <h2 id="explore-title">Explore Records</h2>
+  <div class="card" style="margin-bottom:12px;">
+    <div class="grid two">
+      <div>
+        <label for="categoryFilter" class="muted">Category</label>
+        <select id="categoryFilter" style="width:100%;padding:8px;border-radius:8px;border:1px solid var(--border);background:var(--panel);color:var(--text);">
+          <!-- Script will populate if empty -->
+        </select>
+      </div>
+      <div>
+        <label for="yearFilter" class="muted">Year</label>
+        <select id="yearFilter" style="width:100%;padding:8px;border-radius:8px;border:1px solid var(--border);background:var(--panel);color:var(--text);">
+          <!-- Script will populate (adds "All Years" + years) -->
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div id="records-container" class="card">
+    <!-- Script renders tables/cards here -->
+  </div>
+</section>
     <section id="team-records" aria-labelledby="team-records-title">
       <h2 id="team-records-title">Team Records</h2>
       <div class="grid two">
