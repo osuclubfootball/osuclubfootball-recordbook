@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Team Records — Ohio State Club Football</title>
+  <meta name="description" content="Ohio State Club Football team records: year-by-year results, points, coaches.">
+  <link rel="preload" href="data.json" as="fetch" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Ohio State Club Football Record Book</h1>
+      <p class="subtitle">Team Records</p>
+      <nav class="top-nav" aria-label="Sections">
+        <a href="index.html">Home</a>
+        <a href="team-records.html">Team Records</a>
+        <a href="game-by-game.html">Game-by-Game</a>
+        <a href="record-vs-opponents.html">Record vs. Opponents</a>
+        <a href="awards.html">Awards</a>
+        <a href="all-americans.html">All-Americans</a>
+        <a href="stats.html">Stat Leaders</a>
+      </nav>
+      <div class="actions">
+        <input id="globalSearch" type="search" placeholder="Search..." aria-label="Search">
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="team-records" aria-labelledby="team-records-title">
+      <h2 id="team-records-title">Team Records</h2>
+      <div class="grid two">
+        <article class="card">
+          <h3>Year-by-Year Results</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Year</th><th>Record</th><th>Note</th></tr>
+              </thead>
+              <tbody id="ybyTbody"></tbody>
+            </table>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Points (Game)</h3>
+          <ol id="pointsGameList" class="rank-list"></ol>
+          <p class="legend">Legend markers may denote league, playoff, or title game contexts.</p>
+        </article>
+        <article class="card">
+          <h3>Points (Season)</h3>
+          <ol id="pointsSeasonList" class="rank-list"></ol>
+        </article>
+        <article class="card">
+          <h3>Points Per Game (Season)</h3>
+          <ol id="ppgSeasonList" class="rank-list"></ol>
+        </article>
+        <article class="card">
+          <h3>Wins/Record (Head Coach)</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Coach</th><th>Record</th><th>Tenure</th></tr>
+              </thead>
+              <tbody id="coachesTbody"></tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Data source: `data.json`</p>
+    </div>
+  </footer>
+
+  <script>
+  const safe = v => (v === null || v === undefined) ? "" : v;
+  const makeListItem = (item) => {
+    const li = document.createElement("li");
+    const m = item.marker ? ` <span class="tag">${item.marker}</span>` : "";
+    li.innerHTML = `<span class="rank">${item.rank}.</span> ${safe(item.text)}${m}`;
+    return li;
+  };
+  const filterable = (root, input) => {
+    const q = input.value.trim().toLowerCase();
+    root.querySelectorAll("[data-search]").forEach(el => {
+      const text = el.getAttribute("data-search") || el.textContent || "";
+      el.style.display = text.toLowerCase().includes(q) ? "" : "none";
+    });
+  };
+  async function init() {
+    const res = await fetch("data.json");
+    const data = await res.json();
+    const searchBox = document.getElementById("globalSearch");
+    searchBox.addEventListener("input", () => filterable(document.body, searchBox));
+
+    const ybyTbody = document.getElementById("ybyTbody");
+    (data.team_records?.year_by_year || []).sort((a,b)=>b.year-a.year).forEach(r => {
+      const tr = document.createElement("tr");
+      tr.setAttribute("data-search", `${r.year} ${r.record||""} ${r.note||""}`);
+      tr.innerHTML = `
+        <td>${safe(r.year)}</td>
+        <td>${safe(r.record)}</td>
+        <td>${safe(r.note)}</td>
+      `;
+      ybyTbody.appendChild(tr);
+    });
+
+    const pointsGameList = document.getElementById("pointsGameList");
+    ;(data.team_records?.points_game || []).forEach(x => pointsGameList.appendChild(makeListItem(x)));
+    const pointsSeasonList = document.getElementById("pointsSeasonList");
+    ;(data.team_records?.points_season || []).forEach(x => pointsSeasonList.appendChild(makeListItem(x)));
+    const ppgSeasonList = document.getElementById("ppgSeasonList");
+    ;(data.team_records?.points_per_game_season || []).forEach(x => ppgSeasonList.appendChild(makeListItem(x)));
+
+    const coachesTbody = document.getElementById("coachesTbody");
+    ;(data.team_records?.coach_records || []).forEach(c => {
+      const tr = document.createElement("tr");
+      tr.setAttribute("data-search", `${c.name} ${c.record} ${c.tenure}`);
+      tr.innerHTML = `<td>${safe(c.name)}</td><td>${safe(c.record)}</td><td>${safe(c.tenure)}</td>`;
+      coachesTbody.appendChild(tr);
+    });
+  }
+  init().catch(err => {
+    console.error(err);
+    document.body.insertAdjacentHTML("beforeend", `<pre class="error">Failed to load data. Ensure ohio_state_club_football_record_book.json is present.\n${err}</pre>`);
+  });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
