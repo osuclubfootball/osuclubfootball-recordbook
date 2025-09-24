@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ohio State Club Football Record Book</title>
   <meta name="description" content="Ohio State Club Football Record Book: team records, game-by-game results, awards, All-Americans, captains, and statistical leaders.">
-  <link rel="preload" href="ohio_state_club_football_record_book.json" as="fetch" crossorigin="anonymous">
+  <link rel="preload" href="data.json" as="fetch" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,12 +14,13 @@
       <h1>Ohio State Club Football Record Book</h1>
       <p class="subtitle">Comprehensive records, results, and honors</p>
       <nav class="top-nav" aria-label="Sections">
-        <a href="#team-records">Team Records</a>
-        <a href="#game-by-game">Game-by-Game</a>
-        <a href="#record-vs-opponents">Record vs. Opponents</a>
-        <a href="#awards">Awards</a>
-        <a href="#all-americans">All-Americans</a>
-        <a href="#stats">Stat Leaders</a>
+        <a href="index.html">Home</a>
+        <a href="team-records.html">Team Records</a>
+        <a href="game-by-game.html">Game-by-Game</a>
+        <a href="record-vs-opponents.html">Record vs. Opponents</a>
+        <a href="awards.html">Awards</a>
+        <a href="all-americans.html">All-Americans</a>
+        <a href="stats.html">Stat Leaders</a>
       </nav>
       <div class="actions">
         <input id="globalSearch" type="search" placeholder="Search players, teams, years..." aria-label="Search">
@@ -153,7 +154,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>Data source: `ohio_state_club_football_record_book.json`</p>
+      <p>Data source: `data.json`</p>
     </div>
   </footer>
 
@@ -268,7 +269,7 @@
   };
 
   async function init() {
-    const res = await fetch("ohio_state_club_football_record_book.json");
+    const res = await fetch("data.json");
     const data = await res.json();
 
     const searchBox = document.getElementById("globalSearch");
