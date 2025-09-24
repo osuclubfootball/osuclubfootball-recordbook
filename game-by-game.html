@@ -22,9 +22,7 @@
         <a href="all-americans.html">All-Americans</a>
         <a href="stats.html">Stat Leaders</a>
       </nav>
-      <div class="actions">
-        <input id="globalSearch" type="search" placeholder="Search games..." aria-label="Search">
-      </div>
+      
     </div>
   </header>
 
@@ -76,8 +74,7 @@
   async function init() {
     const res = await fetch("data.json");
     const data = await res.json();
-    const searchBox = document.getElementById("globalSearch");
-    searchBox.addEventListener("input", () => filterable(document.body, searchBox));
+    
 
     const gbgContainer = document.getElementById("gbgContainer");
     (data.game_by_game || []).forEach(season => {
@@ -122,4 +119,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 

@@ -22,9 +22,7 @@
         <a href="all-americans.html">All-Americans</a>
         <a href="stats.html">Stat Leaders</a>
       </nav>
-      <div class="actions">
-        <input id="globalSearch" type="search" placeholder="Search names..." aria-label="Search">
-      </div>
+      
     </div>
   </header>
 
@@ -95,8 +93,7 @@
   async function init() {
     const res = await fetch("data.json");
     const data = await res.json();
-    const searchBox = document.getElementById("globalSearch");
-    searchBox.addEventListener("input", () => filterable(document.body, searchBox));
+    
 
     renderAllAmericans(document.getElementById("aaFirst"), data.all_americans?.first_team || {});
     renderAllAmericans(document.getElementById("aaSecond"), data.all_americans?.second_team || {});
@@ -140,3 +137,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+

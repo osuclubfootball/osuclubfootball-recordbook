@@ -22,9 +22,7 @@
         <a href="all-americans.html">All-Americans</a>
         <a href="stats.html">Stat Leaders</a>
       </nav>
-      <div class="actions">
-        <input id="globalSearch" type="search" placeholder="Search awards..." aria-label="Search">
-      </div>
+      
     </div>
   </header>
 
@@ -53,8 +51,7 @@
   async function init() {
     const res = await fetch("data.json");
     const data = await res.json();
-    const searchBox = document.getElementById("globalSearch");
-    searchBox.addEventListener("input", () => filterable(document.body, searchBox));
+    
 
     const awardsCards = document.getElementById("awardsCards");
     (data.awards || []).forEach(a => {
@@ -77,3 +74,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+
