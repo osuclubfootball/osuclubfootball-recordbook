@@ -23,7 +23,7 @@
         <a href="stats.html">Stat Leaders</a>
       </nav>
       <div class="actions">
-        <input id="globalSearch" type="search" placeholder="Search stats..." aria-label="Search">
+        <input id="globalSearch" type="search" placeholder="Search stats by player or category..." aria-label="Search stats">
       </div>
     </div>
   </header>
@@ -65,24 +65,40 @@
     });
     return card;
   };
-  const filterable = (root, input) => {
-    const q = input.value.trim().toLowerCase();
-    root.querySelectorAll("[data-search]").forEach(el => {
-      const text = el.getAttribute("data-search") || el.textContent || "";
-      el.style.display = text.toLowerCase().includes(q) ? "" : "none";
+  // Enhanced search: matches player names within item.text or category names
+  function renderStats(stats, query) {
+    const grid = document.getElementById("statsGrid");
+    grid.innerHTML = "";
+    const q = (query || "").trim().toLowerCase();
+
+    const filterItem = (itemText) => {
+      if (!q) return true;
+      return (itemText || "").toLowerCase().includes(q);
+    };
+
+    Object.keys(stats).forEach(block => {
+      const subcats = stats[block] || {};
+      // If filtering by category, allow matching block or subcat names
+      const blockMatches = q && block.toLowerCase().includes(q);
+      const filtered = {};
+      Object.keys(subcats).forEach(sub => {
+        const subMatches = q && sub.toLowerCase().includes(q);
+        const items = (subcats[sub] || []).filter(it => blockMatches || subMatches || filterItem(it.text));
+        if (items.length) filtered[sub] = items;
+      });
+      const toRender = q ? filtered : subcats;
+      if (Object.keys(toRender).length) {
+        grid.appendChild(renderStatsBlock(block.charAt(0).toUpperCase() + block.slice(1), toRender));
+      }
     });
-  };
+  }
   async function init() {
     const res = await fetch("data.json");
     const data = await res.json();
     const searchBox = document.getElementById("globalSearch");
-    searchBox.addEventListener("input", () => filterable(document.body, searchBox));
-
-    const statsGrid = document.getElementById("statsGrid");
     const stats = data.stats || {};
-    Object.keys(stats).forEach(block => {
-      statsGrid.appendChild(renderStatsBlock(block.charAt(0).toUpperCase() + block.slice(1), stats[block]));
-    });
+    searchBox.addEventListener("input", () => renderStats(stats, searchBox.value));
+    renderStats(stats, "");
   }
   init().catch(err => {
     console.error(err);
@@ -92,4 +108,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 

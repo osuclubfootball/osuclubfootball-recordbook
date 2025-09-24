@@ -22,9 +22,7 @@
         <a href="all-americans.html">All-Americans</a>
         <a href="stats.html">Stat Leaders</a>
       </nav>
-      <div class="actions">
-        <input id="globalSearch" type="search" placeholder="Search..." aria-label="Search">
-      </div>
+      
     </div>
   </header>
 
@@ -85,18 +83,9 @@
     li.innerHTML = `<span class="rank">${item.rank}.</span> ${safe(item.text)}${m}`;
     return li;
   };
-  const filterable = (root, input) => {
-    const q = input.value.trim().toLowerCase();
-    root.querySelectorAll("[data-search]").forEach(el => {
-      const text = el.getAttribute("data-search") || el.textContent || "";
-      el.style.display = text.toLowerCase().includes(q) ? "" : "none";
-    });
-  };
   async function init() {
     const res = await fetch("data.json");
     const data = await res.json();
-    const searchBox = document.getElementById("globalSearch");
-    searchBox.addEventListener("input", () => filterable(document.body, searchBox));
 
     const ybyTbody = document.getElementById("ybyTbody");
     (data.team_records?.year_by_year || []).sort((a,b)=>b.year-a.year).forEach(r => {
@@ -127,9 +116,11 @@
   }
   init().catch(err => {
     console.error(err);
-    document.body.insertAdjacentHTML("beforeend", `<pre class="error">Failed to load data. Ensure ohio_state_club_football_record_book.json is present.\n${err}</pre>`);
+    document.body.insertAdjacentHTML("beforeend", `<pre class="error">Failed to load data. Ensure data.json is present.\n${err}</pre>`);
   });
   </script>
   <script src="script.js"></script>
 </body>
 </html>
+
+

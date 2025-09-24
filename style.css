@@ -30,12 +30,11 @@ html, body {
 }
 
 .site-header {
-  background: linear-gradient(180deg, rgba(219,68,55,0.15), rgba(0,0,0,0)) , transparent;
+  background: linear-gradient(180deg, rgba(219,68,55,0.25), rgba(0,0,0,0.1));
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 10;
-  backdrop-filter: saturate(1.2) blur(6px);
 }
 
 .site-header h1 {
