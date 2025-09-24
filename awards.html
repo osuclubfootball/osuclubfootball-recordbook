@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Awards — Ohio State Club Football</title>
+  <meta name="description" content="Ohio State Club Football NCFA awards and honors.">
+  <link rel="preload" href="data.json" as="fetch" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Ohio State Club Football Record Book</h1>
+      <p class="subtitle">NCFA National Awards</p>
+      <nav class="top-nav" aria-label="Sections">
+        <a href="index.html">Home</a>
+        <a href="team-records.html">Team Records</a>
+        <a href="game-by-game.html">Game-by-Game</a>
+        <a href="record-vs-opponents.html">Record vs. Opponents</a>
+        <a href="awards.html">Awards</a>
+        <a href="all-americans.html">All-Americans</a>
+        <a href="stats.html">Stat Leaders</a>
+      </nav>
+      <div class="actions">
+        <input id="globalSearch" type="search" placeholder="Search awards..." aria-label="Search">
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="awards" aria-labelledby="awards-title">
+      <h2 id="awards-title">NCFA National Awards</h2>
+      <div id="awardsCards" class="grid three"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Data source: `data.json`</p>
+    </div>
+  </footer>
+
+  <script>
+  const safe = v => (v === null || v === undefined) ? "" : v;
+  const filterable = (root, input) => {
+    const q = input.value.trim().toLowerCase();
+    root.querySelectorAll("[data-search]").forEach(el => {
+      const text = el.getAttribute("data-search") || el.textContent || "";
+      el.style.display = text.toLowerCase().includes(q) ? "" : "none";
+    });
+  };
+  async function init() {
+    const res = await fetch("data.json");
+    const data = await res.json();
+    const searchBox = document.getElementById("globalSearch");
+    searchBox.addEventListener("input", () => filterable(document.body, searchBox));
+
+    const awardsCards = document.getElementById("awardsCards");
+    (data.awards || []).forEach(a => {
+      const card = document.createElement("article");
+      card.className = "card award";
+      card.setAttribute("data-search", `${a.title} ${a.role||""} ${a.person||""} ${a.narrative||""}`);
+      card.innerHTML = `
+        <h3>${safe(a.title)}</h3>
+        <p class="muted">${[safe(a.role), safe(a.person)].filter(Boolean).join(" — ")}</p>
+        <p>${safe(a.narrative)}</p>
+      `;
+      awardsCards.appendChild(card);
+    });
+  }
+  init().catch(err => {
+    console.error(err);
+    document.body.insertAdjacentHTML("beforeend", `<pre class="error">Failed to load data. Ensure data.json is present.\n${err}</pre>`);
+  });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
