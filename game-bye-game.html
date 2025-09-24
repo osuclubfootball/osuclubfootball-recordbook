@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game-by-Game — Ohio State Club Football</title>
+  <meta name="description" content="Ohio State Club Football game-by-game results by season.">
+  <link rel="preload" href="data.json" as="fetch" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Ohio State Club Football Record Book</h1>
+      <p class="subtitle">Game-by-Game Results</p>
+      <nav class="top-nav" aria-label="Sections">
+        <a href="index.html">Home</a>
+        <a href="team-records.html">Team Records</a>
+        <a href="game-by-game.html">Game-by-Game</a>
+        <a href="record-vs-opponents.html">Record vs. Opponents</a>
+        <a href="awards.html">Awards</a>
+        <a href="all-americans.html">All-Americans</a>
+        <a href="stats.html">Stat Leaders</a>
+      </nav>
+      <div class="actions">
+        <input id="globalSearch" type="search" placeholder="Search games..." aria-label="Search">
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="game-by-game" aria-labelledby="gbg-title">
+      <h2 id="gbg-title">Game-by-Game Results</h2>
+      <div id="gbgContainer" class="accordion"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Data source: `ohio_state_club_football_record_book.json`</p>
+    </div>
+  </footer>
+
+  <script>
+  const safe = v => (v === null || v === undefined) ? "" : v;
+  const filterable = (root, input) => {
+    const q = input.value.trim().toLowerCase();
+    root.querySelectorAll("[data-search]").forEach(el => {
+      const text = el.getAttribute("data-search") || el.textContent || "";
+      el.style.display = text.toLowerCase().includes(q) ? "" : "none";
+    });
+  };
+  const parseGameRow = g => {
+    const outcome = safe(g.outcome);
+    const site = safe(g.site);
+    const aTeam = safe(g.team_a);
+    const aScore = g.score_a === null ? "" : g.score_a;
+    const bTeam = safe(g.team_b);
+    const bScore = g.score_b === null ? "" : g.score_b;
+    const note = safe(g.note);
+    const markers = Array.isArray(g.markers) ? g.markers.join("") : (g.markers || "");
+    const raw = safe(g.raw);
+    const left = aTeam && aScore !== "" ? `${aTeam} ${aScore}` : aTeam || "";
+    const right = bTeam && bScore !== "" ? `${bTeam} ${bScore}` : bTeam || "";
+    let matchup = "";
+    if (left && right) {
+      const sep = site === "neutral" ? "vs." : (site === "away" ? "@" : "@");
+      matchup = `${left} ${sep} ${right}`;
+    } else if (raw) {
+      matchup = raw;
+    } else {
+      matchup = [left, right].filter(Boolean).join(" @ ");
+    }
+    return { outcome, site, matchup, note, markers };
+  };
+  async function init() {
+    const res = await fetch("data.json");
+    const data = await res.json();
+    const searchBox = document.getElementById("globalSearch");
+    searchBox.addEventListener("input", () => filterable(document.body, searchBox));
+
+    const gbgContainer = document.getElementById("gbgContainer");
+    (data.game_by_game || []).forEach(season => {
+      const details = document.createElement("details");
+      details.className = "card";
+      const summary = document.createElement("summary");
+      summary.textContent = season.season_header || "Season";
+      details.appendChild(summary);
+      const tblWrap = document.createElement("div");
+      tblWrap.className = "table-wrap";
+      const table = document.createElement("table");
+      table.innerHTML = `
+        <thead>
+          <tr><th>Result</th><th>Site</th><th>Matchup</th><th>Note</th><th>Markers</th></tr>
+        </thead>
+        <tbody></tbody>
+      `;
+      const tbody = table.querySelector("tbody");
+      (season.games || []).forEach(g => {
+        const row = parseGameRow(g);
+        const tr = document.createElement("tr");
+        tr.setAttribute("data-search", `${summary.textContent} ${row.matchup} ${row.note} ${row.markers}`);
+        tr.innerHTML = `
+          <td><span class="badge ${row.outcome === "W" ? "win" : row.outcome === "L" ? "loss" : "neutral"}">${safe(row.outcome)}</span></td>
+          <td>${safe(row.site)}</td>
+          <td>${safe(row.matchup)}</td>
+          <td>${safe(row.note)}</td>
+          <td>${safe(row.markers)}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+      tblWrap.appendChild(table);
+      details.appendChild(tblWrap);
+      gbgContainer.appendChild(details);
+    });
+  }
+  init().catch(err => {
+    console.error(err);
+    document.body.insertAdjacentHTML("beforeend", `<pre class="error">Failed to load data. Ensure data.json is present.\n${err}</pre>`);
+  });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
+
