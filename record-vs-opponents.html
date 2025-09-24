@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Record vs. Opponents — Ohio State Club Football</title>
+  <meta name="description" content="Ohio State Club Football record vs opponents, with overall totals.">
+  <link rel="preload" href="data.json" as="fetch" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Ohio State Club Football Record Book</h1>
+      <p class="subtitle">Record vs. Opponents</p>
+      <nav class="top-nav" aria-label="Sections">
+        <a href="index.html">Home</a>
+        <a href="team-records.html">Team Records</a>
+        <a href="game-by-game.html">Game-by-Game</a>
+        <a href="record-vs-opponents.html">Record vs. Opponents</a>
+        <a href="awards.html">Awards</a>
+        <a href="all-americans.html">All-Americans</a>
+        <a href="stats.html">Stat Leaders</a>
+      </nav>
+      <div class="actions">
+        <input id="globalSearch" type="search" placeholder="Search opponents..." aria-label="Search">
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="record-vs-opponents" aria-labelledby="rvo-title">
+      <h2 id="rvo-title">Record vs. Opponents</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Opponent</th><th>W</th><th>L</th><th>First</th><th>Last</th></tr>
+          </thead>
+          <tbody id="rvoTbody"></tbody>
+          <tfoot>
+            <tr id="rvoOverallRow" class="muted"><td>Overall</td><td colspan="4" id="rvoOverallCell"></td></tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Data source: `data.json`</p>
+    </div>
+  </footer>
+
+  <script>
+  const safe = v => (v === null || v === undefined) ? "" : v;
+  const filterable = (root, input) => {
+    const q = input.value.trim().toLowerCase();
+    root.querySelectorAll("[data-search]").forEach(el => {
+      const text = el.getAttribute("data-search") || el.textContent || "";
+      el.style.display = text.toLowerCase().includes(q) ? "" : "none";
+    });
+  };
+  async function init() {
+    const res = await fetch("data.json");
+    const data = await res.json();
+    const searchBox = document.getElementById("globalSearch");
+    searchBox.addEventListener("input", () => filterable(document.body, searchBox));
+
+    const rvoTbody = document.getElementById("rvoTbody");
+    (data.record_vs_opponents?.rows || []).sort((a,b) => a.opponent.localeCompare(b.opponent)).forEach(r => {
+      const tr = document.createElement("tr");
+      tr.setAttribute("data-search", `${r.opponent} ${r.won}-${r.lost} ${r.first_meeting} ${r.last_meeting}`);
+      tr.innerHTML = `
+        <td>${safe(r.opponent)}</td>
+        <td>${safe(r.won)}</td>
+        <td>${safe(r.lost)}</td>
+        <td>${safe(r.first_meeting)}</td>
+        <td>${safe(r.last_meeting)}</td>
+      `;
+      rvoTbody.appendChild(tr);
+    });
+    const overall = data.record_vs_opponents?.overall;
+    const overallCell = document.getElementById("rvoOverallCell");
+    if (overall && (overall.won !== undefined)) {
+      overallCell.textContent = `${overall.won}-${overall.lost}`;
+    } else {
+      document.getElementById("rvoOverallRow").style.display = "none";
+    }
+  }
+  init().catch(err => {
+    console.error(err);
+    document.body.insertAdjacentHTML("beforeend", `<pre class="error">Failed to load data. Ensure data.json is present.\n${err}</pre>`);
+  });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
