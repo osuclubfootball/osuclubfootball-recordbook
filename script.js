@@ -1,6 +1,6 @@
 async function loadRecords() {
   // 1) Fetch the record book JSON
-  const response = await fetch("ohio_state_club_football_record_book.json");
+  const response = await fetch("data.json");
   const data = await response.json();
 
   // 2) Optional elements (script will no-op if they're not present)
