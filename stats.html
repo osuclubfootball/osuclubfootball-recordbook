@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stat Leaders — Ohio State Club Football</title>
+  <meta name="description" content="Ohio State Club Football statistical leaders.">
+  <link rel="preload" href="data.json" as="fetch" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Ohio State Club Football Record Book</h1>
+      <p class="subtitle">Statistical Leaders</p>
+      <nav class="top-nav" aria-label="Sections">
+        <a href="index.html">Home</a>
+        <a href="team-records.html">Team Records</a>
+        <a href="game-by-game.html">Game-by-Game</a>
+        <a href="record-vs-opponents.html">Record vs. Opponents</a>
+        <a href="awards.html">Awards</a>
+        <a href="all-americans.html">All-Americans</a>
+        <a href="stats.html">Stat Leaders</a>
+      </nav>
+      <div class="actions">
+        <input id="globalSearch" type="search" placeholder="Search stats..." aria-label="Search">
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="stats" aria-labelledby="stats-title">
+      <h2 id="stats-title">Statistical Leaders</h2>
+      <div class="grid two" id="statsGrid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Data source: `ohio_state_club_football_record_book.json`</p>
+    </div>
+  </footer>
+
+  <script>
+  const safe = v => (v === null || v === undefined) ? "" : v;
+  const makeListItem = (item) => {
+    const li = document.createElement("li");
+    const m = item.marker ? ` <span class="tag">${item.marker}</span>` : "";
+    li.innerHTML = `<span class="rank">${item.rank}.</span> ${safe(item.text)}${m}`;
+    return li;
+  };
+  const renderStatsBlock = (title, subcats) => {
+    const card = document.createElement("article");
+    card.className = "card";
+    const h = document.createElement("h3");
+    h.textContent = title;
+    card.appendChild(h);
+    Object.keys(subcats).forEach(sub => {
+      const subH = document.createElement("h4");
+      subH.textContent = sub;
+      const ol = document.createElement("ol");
+      ol.className = "rank-list compact";
+      (subcats[sub] || []).forEach(item => ol.appendChild(makeListItem(item)));
+      card.append(subH, ol);
+    });
+    return card;
+  };
+  const filterable = (root, input) => {
+    const q = input.value.trim().toLowerCase();
+    root.querySelectorAll("[data-search]").forEach(el => {
+      const text = el.getAttribute("data-search") || el.textContent || "";
+      el.style.display = text.toLowerCase().includes(q) ? "" : "none";
+    });
+  };
+  async function init() {
+    const res = await fetch("data.json");
+    const data = await res.json();
+    const searchBox = document.getElementById("globalSearch");
+    searchBox.addEventListener("input", () => filterable(document.body, searchBox));
+
+    const statsGrid = document.getElementById("statsGrid");
+    const stats = data.stats || {};
+    Object.keys(stats).forEach(block => {
+      statsGrid.appendChild(renderStatsBlock(block.charAt(0).toUpperCase() + block.slice(1), stats[block]));
+    });
+  }
+  init().catch(err => {
+    console.error(err);
+    document.body.insertAdjacentHTML("beforeend", `<pre class="error">Failed to load data. Ensure data.json is present.\n${err}</pre>`);
+  });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
+
