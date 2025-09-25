@@ -25,7 +25,12 @@
     </div>
   </header>
 
-  
+  <div class="image-overlay">
+    <img src="2024NattyRing.png" alt="2024 Ring" class="overlay-img">
+    <div class="2024 National Championship Ring">
+      <h3>2024 National Championship Ring</h3>
+    </div>
+  </div>
     <section id="game-by-game" aria-labelledby="gbg-title">
       <h2 id="gbg-title">Game-by-Game Results</h2>
       <div id="gbgContainer" class="accordion"></div>
@@ -343,7 +348,7 @@
 
   init().catch(err => {
     console.error(err);
-    document.body.insertAdjacentHTML("beforeend", `<pre class="error">Failed to load data. Ensure ohio_state_club_football_record_book.json is present.\n${err}</pre>`);
+    document.body.insertAdjacentHTML("beforeend", `<pre class="error">Failed to load data. Ensure data.json is present.\n${err}</pre>`);
   });
   </script>
   <script src="script.js"></script>
