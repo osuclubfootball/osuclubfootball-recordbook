@@ -30,7 +30,7 @@ html, body {
 }
 
 .site-header {
-  background: linear-gradient(180deg, rgba(219,68,55,0.25), rgba(0,0,0,0.1));
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
@@ -101,6 +101,27 @@ h4 {
 .grid {
   display: grid;
   gap: 16px;
+}
+.image-overlay {
+  position: relative;
+  display: inline-block;
+}
+
+.overlay-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  color: white;
+  padding: 20px;
+  border-radius: 0 0 8px 8px;
 }
 
 .grid.two { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
