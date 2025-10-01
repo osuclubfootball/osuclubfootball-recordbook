@@ -171,6 +171,7 @@ tfoot td {
 .rank-list {
   margin: 0;
   padding-left: 22px;
+  list-style: none;
 }
 
 .rank-list.compact li {
