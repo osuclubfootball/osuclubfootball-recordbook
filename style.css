@@ -17,9 +17,7 @@
 html, body {
   margin: 0;
   color: var(--text);
-  background: radial-gradient(1200px 800px at 10% -10%, rgba(219, 68, 55, 0.15), transparent 50%),
-              radial-gradient(1000px 600px at 100% 0%, rgba(219, 68, 55, 0.08), transparent 40%),
-              var(--bg);
+  background: #f5f5f5;
   font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji","Segoe UI Emoji";
 }
 
@@ -102,13 +100,26 @@ h4 {
   display: grid;
   gap: 16px;
 }
+.image-section {
+  text-align: center;
+  padding: 24px 16px;
+}
+.record-book-text {
+  color: var(--muted);
+  font-size: 18px;
+  margin: 0 0 16px 0;
+  font-weight: 600;
+}
 .image-overlay {
   position: relative;
   display: inline-block;
+  max-width: 400px;
 }
 .image-overlay img {
   display: block;
-  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .overlay-img {
@@ -145,9 +156,16 @@ h4 {
   font-weight: 900;
   font-size: 80px;
   text-align: center;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
 }
-.stat span { display: block; color: var(--brand); font-weight: 900; font-size: 16px; }
-.stat.big { grid-column: 2 / 3; grid-row: 2 / 3; font-size: 150px; }
+.stat span { 
+  display: block; 
+  color: var(--brand); 
+  font-weight: 900; 
+  font-size: 16px; 
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+.stat.big { grid-column: 2 / 3; grid-row: 2 / 3; font-size: 64px; }
 .stat.aa { grid-column: 1 / 2; grid-row: 1 / 2; }
 .stat.conf { grid-column: 3 / 4; grid-row: 1 / 2; }
 .stat.awards { grid-column: 1 / 2; grid-row: 3 / 4; }
