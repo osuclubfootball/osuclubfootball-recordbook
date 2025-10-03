@@ -124,6 +124,40 @@ h4 {
   border-radius: 0 0 8px 8px;
 }
 
+/* Home stats hero */
+.stats-hero {
+  padding: 24px 16px 8px 16px;
+}
+.stats-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: center;
+  justify-items: center;
+}
+.stat {
+  color: var(--brand);
+  font-weight: 800;
+  font-size: 34px;
+  text-align: center;
+}
+.stat span {
+  display: block;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 16px;
+}
+.stat.big {
+  grid-column: 2 / 3;
+  font-size: 48px;
+}
+@media (max-width: 720px) {
+  .stats-grid { grid-template-columns: 1fr; }
+  .stat.big { grid-column: auto; }
+}
+
 .grid.two { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 .grid.three { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 
