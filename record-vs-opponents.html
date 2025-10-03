@@ -79,12 +79,18 @@
       `;
       rvoTbody.appendChild(tr);
     });
-    const overall = data.record_vs_opponents?.overall;
     const overallCell = document.getElementById("rvoOverallCell");
-    if (overall && (overall.won !== undefined)) {
-      overallCell.textContent = `${overall.won}-${overall.lost}`;
-    } else {
-      document.getElementById("rvoOverallRow").style.display = "none";
+    const rows = data.record_vs_opponents?.rows || [];
+    const totals = rows.reduce((acc, r) => {
+      const w = Number(r.won) || 0;
+      const l = Number(r.lost) || 0;
+      acc.won += w;
+      acc.lost += l;
+      return acc;
+    }, { won: 0, lost: 0 });
+    if (overallCell) {
+      overallCell.textContent = `${totals.won}-${totals.lost}`;
+      document.getElementById("rvoOverallRow").style.display = "";
     }
   }
   init().catch(err => {

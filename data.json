@@ -1400,7 +1400,10 @@
         "last_meeting": 2013
       }
     ],
-    "overall": null
+    "overall": {
+      "won": 72,
+      "lost": 27
+    }
   },
   "awards": [
     {
