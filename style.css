@@ -143,7 +143,7 @@ h4 {
 .stat {
   color: var(--brand);
   font-weight: 900;
-  font-size: 40px;
+  font-size: 80px;
   text-align: center;
 }
 .stat span { display: block; color: var(--brand); font-weight: 900; font-size: 16px; }
@@ -157,8 +157,8 @@ h4 {
     grid-template-columns: 1fr;
     grid-template-rows: none;
   }
-  .stat, .stat span { font-size: 32px; }
-  .stat.big { grid-column: auto; grid-row: auto; font-size: 56px; }
+  .stat, .stat span { font-size: 70px; }
+  .stat.big { grid-column: auto; grid-row: auto; font-size: 120px; }
 }
 
 .grid.two { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
