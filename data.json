@@ -236,11 +236,44 @@
           "site": "away",
           "team_a": "OHIO STATE",
           "score_a": 27,
-          "team_b": "Wright State 17 L OHIO STATE 6 @ Coppin State 41 L OHIO STATE 14 @ Denison (JV) 23 L OHIO STATE 0 @ SIUe",
+          "team_b": "Wright State",
+          "score_b": 17,
+          "markers": null,
+          "note": null,
+          "raw": "OHIO STATE 27 @ Wright State 17"
+        },
+        {
+          "outcome": "L",
+          "site": "away",
+          "team_a": "OHIO STATE",
+          "score_a": 6,
+          "team_b": "Coppin State",
+          "score_b": 41,
+          "markers": null,
+          "note": null,
+          "raw": "OHIO STATE 6 @ Coppin State 41"
+        },
+        {
+          "outcome": "L",
+          "site": "away",
+          "team_a": "OHIO STATE",
+          "score_a": 14,
+          "team_b": "Denison (JV)",
+          "score_b": 23,
+          "markers": null,
+          "note": null,
+          "raw": "OHIO STATE 14 @ Denison (JV) 23"
+        },
+        {
+          "outcome": "L",
+          "site": "away",
+          "team_a": "OHIO STATE",
+          "score_a": 0,
+          "team_b": "SIUe",
           "score_b": 2,
           "markers": null,
           "note": "Forfeit",
-          "raw": "OHIO STATE 27 @ Wright State 17 L OHIO STATE 6 @ Coppin State 41 L OHIO STATE 14 @ Denison (JV) 23 L OHIO STATE 0 @ SIUe 2"
+          "raw": "OHIO STATE 0 @ SIUe 2"
         },
         {
           "outcome": "L",
@@ -389,11 +422,22 @@
           "site": "home",
           "team_a": "George Mason",
           "score_a": 14,
-          "team_b": "OHIO STATE 20 L OHIO STATE 3 @ Oakland",
+          "team_b": "OHIO STATE",
+          "score_b": 20,
+          "markers": null,
+          "note": null,
+          "raw": "George Mason 14 @ OHIO STATE 20"
+        },
+        {
+          "outcome": "L",
+          "site": "away",
+          "team_a": "OHIO STATE",
+          "score_a": 3,
+          "team_b": "Oakland",
           "score_b": 48,
           "markers": null,
           "note": null,
-          "raw": "George Mason 14 @ OHIO STATE 20 L OHIO STATE 3 @ Oakland 48"
+          "raw": "OHIO STATE 3 @ Oakland 48"
         },
         {
           "outcome": "L",
@@ -518,7 +562,7 @@
       ]
     },
     {
-      "season_header": "2017 (6-2, 4-2 Mid-Atlantic West) W OHIO STATE 2 @ E. Michigan 0 (Forfeit)",
+      "season_header": "2017 (6-2, 4-2 Mid-Atlantic West)",
       "games": [
         {
           "outcome": "W",
@@ -898,11 +942,22 @@
           "site": "home",
           "team_a": "Michigan State",
           "score_a": 17,
-          "team_b": "OHIO STATE 52 W OHIO STATE 2 @ Loyola Chicago",
+          "team_b": "OHIO STATE",
+          "score_b": 52,
+          "markers": null,
+          "note": null,
+          "raw": "Michigan State 17 @ OHIO STATE 52"
+        },
+        {
+          "outcome": "W",
+          "site": "away",
+          "team_a": "OHIO STATE",
+          "score_a": 2,
+          "team_b": "Loyola Chicago",
           "score_b": 0,
           "markers": null,
           "note": "Forfeit",
-          "raw": "Michigan State 17 @ OHIO STATE 52 W OHIO STATE 2 @ Loyola Chicago 0"
+          "raw": "OHIO STATE 2 @ Loyola Chicago 0"
         },
         {
           "outcome": "W",
@@ -1015,11 +1070,33 @@
           "site": "home",
           "team_a": "Pittsburgh",
           "score_a": 0,
-          "team_b": "OHIO STATE 2 (Forfeit) W OHIO STATE 46 @ Ohio Northern JV 7 W OHIO STATE 30 @ Denison (JV)",
+          "team_b": "OHIO STATE",
+          "score_b": 2,
+          "markers": null,
+          "note": "Forfeit",
+          "raw": "Pittsburgh 0 @ OHIO STATE 2 (Forfeit)"
+        },
+        {
+          "outcome": "W",
+          "site": "away",
+          "team_a": "OHIO STATE",
+          "score_a": 46,
+          "team_b": "Ohio Northern JV",
+          "score_b": 7,
+          "markers": null,
+          "note": null,
+          "raw": "OHIO STATE 46 @ Ohio Northern JV 7"
+        },
+        {
+          "outcome": "W",
+          "site": "away",
+          "team_a": "OHIO STATE",
+          "score_a": 30,
+          "team_b": "Denison (JV)",
           "score_b": 3,
           "markers": null,
           "note": null,
-          "raw": "Pittsburgh 0 @ OHIO STATE 2 (Forfeit) W OHIO STATE 46 @ Ohio Northern JV 7 W OHIO STATE 30 @ Denison (JV) 3"
+          "raw": "OHIO STATE 30 @ Denison (JV) 3"
         },
         {
           "outcome": "L",
