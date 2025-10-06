@@ -137,12 +137,12 @@ h4 {
 }
 .image-section {
   text-align: center;
-  padding: 24px 16px;
+  padding: 48px 16px 24px 16px;
 }
 
 @media (max-width: 768px) {
   .image-section {
-    padding: 16px 8px;
+    padding: 32px 8px 16px 8px;
   }
 }
 .record-book-text {
@@ -194,11 +194,11 @@ h4 {
 }
 
 /* Home stats hero */
-.stats-hero { padding: 24px 16px 8px 16px; }
+.stats-hero { padding: 16px 16px 24px 16px; }
 
 @media (max-width: 768px) {
   .stats-hero { 
-    padding: 16px 8px 4px 8px; 
+    padding: 12px 8px 16px 8px; 
   }
 }
 .stats-grid {
@@ -382,6 +382,7 @@ pre.error {
 /* Card Images */
 .card-image {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 16px 0;
@@ -392,6 +393,15 @@ pre.error {
   height: auto;
   border-radius: 8px;
   box-shadow: var(--shadow);
+}
+
+.image-caption {
+  margin: 8px 0 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+  font-style: italic;
+  max-width: 300px;
 }
 
 /* Desktop: Images below cards */
@@ -434,6 +444,11 @@ pre.error {
   }
   
   .responsive-image {
+    max-width: 250px;
+  }
+  
+  .image-caption {
+    font-size: 12px;
     max-width: 250px;
   }
 }
