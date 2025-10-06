@@ -17,7 +17,7 @@
 html, body {
   margin: 0;
   color: var(--text);
-  background: radial-gradient(ellipse at center, #5c1c1c 0%, #404040 80%, #000000 100%);
+  background: radial-gradient(ellipse at center, #3b2020 0%, #4a4a4a 80%, #000000 100%);
   min-height: 100vh;
   font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji","Segoe UI Emoji";
 }
@@ -33,13 +33,57 @@ html, body {
     padding: 12px 8px;
   }
   
+  .site-header {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    max-width: none;
+  }
+  
   .site-header .container {
+    max-width: none;
+    width: 100%;
     padding: 12px 16px;
+    margin: 0;
+    box-sizing: border-box;
   }
   
   .minimize-btn {
     top: 12px;
     right: 12px;
+  }
+  
+  /* Ensure header content doesn't overflow */
+  .site-header h1,
+  .site-header .subtitle,
+  .site-header .top-nav {
+    max-width: none;
+  }
+}
+
+/* Extra small screens - force full width */
+@media (max-width: 480px) {
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    margin: 0;
+    z-index: 1000;
+  }
+  
+  .site-header .container {
+    width: 100%;
+    max-width: none;
+    padding: 8px 12px;
+  }
+  
+  body {
+    padding-top: 80px; /* Account for fixed header */
   }
 }
 
@@ -51,6 +95,7 @@ html, body {
   z-index: 10;
   width: 100%;
   transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 .site-header.minimized {
