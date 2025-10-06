@@ -1746,108 +1746,288 @@
     ]
   },
   "team_captains": {
+    "2009-2011": [
+      {
+        "name": "Joe Budgake",
+        "position": null
+      },
+      {
+        "name": "Marshal Carpenter",
+        "position": null
+      },
+      {
+        "name": "Nick Herrin",
+        "position": null
+      }
+    ],
     "2012": [
       {
-        "name": "Jeff Porter QB Andrew Bialek OG Jared Neidhard LB",
-        "position": null
+        "name": "Jeff Porter",
+        "position": "QB"
       },
       {
-        "name": "2009",
-        "position": "2011"
+        "name": "Andrew Bialek",
+        "position": "OG"
       },
       {
-        "name": "Joe Budgake Marshal Carpenter Nick Herrin",
-        "position": null
-      },
-      {
-        "name": "(Above, from left): Ken Merchant, Bobby Newby, Taariq Parker, Matt Thiede and Brent Lary during the coin toss prior to a 30",
-        "position": "0 win over George Mason in 2016."
-      },
-      {
-        "name": "Disclaimer: Some stats recorded from 2012",
-        "position": "2017 are incomplete and may not completely reflect the impact of certain athletes. Stats not recorded 2009-11."
+        "name": "Jared Neidhard",
+        "position": "LB"
       }
     ],
     "2013": [
       {
-        "name": "George Shapiro Safety Andrew Francis Center Andrew Bialek OG Michael Mullen DL Jared Neidhard LB Chris Kuzak DL",
-        "position": null
+        "name": "George Shapiro",
+        "position": "Safety"
+      },
+      {
+        "name": "Andrew Francis",
+        "position": "Center"
+      },
+      {
+        "name": "Andrew Bialek",
+        "position": "OG"
+      },
+      {
+        "name": "Michael Mullen",
+        "position": "DL"
+      },
+      {
+        "name": "Jared Neidhard",
+        "position": "LB"
+      },
+      {
+        "name": "Chris Kuzak",
+        "position": "DL"
       }
     ],
     "2014": [
       {
-        "name": "Tyler Gabalski LB James Etheridge LB Will Madley OL",
-        "position": null
+        "name": "Tyler Gabalski",
+        "position": "LB"
+      },
+      {
+        "name": "James Etheridge",
+        "position": "LB"
+      },
+      {
+        "name": "Will Madley",
+        "position": "OL"
       }
     ],
     "2015": [
       {
-        "name": "Ken Merchant, Jr. DB Matt Thiede OL James Etheridge LB Tyler Jackson WR/DB",
-        "position": null
+        "name": "Ken Merchant, Jr.",
+        "position": "DB"
+      },
+      {
+        "name": "Matt Thiede",
+        "position": "OL"
+      },
+      {
+        "name": "James Etheridge",
+        "position": "LB"
+      },
+      {
+        "name": "Tyler Jackson",
+        "position": "WR/DB"
       }
     ],
     "2016": [
       {
-        "name": "Ken Merchant, Jr. DB Bobby Newby WR/CB Taariq Parker LB",
-        "position": null
+        "name": "Ken Merchant, Jr.",
+        "position": "DB"
       },
       {
-        "name": "Matt Thiede OL Tyler Jackson QB Brent Lary QB/DE",
-        "position": null
+        "name": "Bobby Newby",
+        "position": "WR/CB"
+      },
+      {
+        "name": "Taariq Parker",
+        "position": "LB"
+      },
+      {
+        "name": "Matt Thiede",
+        "position": "OL"
+      },
+      {
+        "name": "Tyler Jackson",
+        "position": "QB"
+      },
+      {
+        "name": "Brent Lary",
+        "position": "QB/DE"
       }
     ],
     "2017": [
       {
-        "name": "Dylan Barron LB Hamzah Masood OT Tyler Jackson QB Kody Brown LB",
-        "position": null
+        "name": "Dylan Barron",
+        "position": "LB"
+      },
+      {
+        "name": "Hamzah Masood",
+        "position": "OT"
+      },
+      {
+        "name": "Tyler Jackson",
+        "position": "QB"
+      },
+      {
+        "name": "Kody Brown",
+        "position": "LB"
       }
     ],
     "2018": [
       {
-        "name": "Dylan Barron LB Adam Bardak TE/LB Lorenzo King K/P Chase Gasser DL",
-        "position": null
+        "name": "Dylan Barron",
+        "position": "LB"
       },
       {
-        "name": "(Below, from left) Zach Davis, Jonathan Thiele, Jackson Rittman and Christian Allen prior to kickoff in 2024 NCFA National Championship Game.",
-        "position": null
+        "name": "Adam Bardak",
+        "position": "TE/LB"
+      },
+      {
+        "name": "Lorenzo King",
+        "position": "K/P"
+      },
+      {
+        "name": "Chase Gasser",
+        "position": "DL"
       }
     ],
     "2019": [
       {
-        "name": "Kellyn Gerenstein QB Ryan Walsh Center Adam Bardak TE/LB Mike Fenstermaker DL",
-        "position": null
+        "name": "Kellyn Gerenstein",
+        "position": "QB"
+      },
+      {
+        "name": "Ryan Walsh",
+        "position": "Center"
+      },
+      {
+        "name": "Adam Bardak",
+        "position": "TE/LB"
+      },
+      {
+        "name": "Mike Fenstermaker",
+        "position": "DL"
       }
     ],
     "2021": [
       {
-        "name": "Kellyn Gerenstein QB Casey Scroggins WR/DB Spencer Moore QB/TE",
-        "position": null
+        "name": "Kellyn Gerenstein",
+        "position": "QB"
       },
       {
-        "name": "Jordan Griffith",
-        "position": "Simmon OL/DL Adam Bardak TE/LB"
+        "name": "Casey Scroggins",
+        "position": "WR/DB"
+      },
+      {
+        "name": "Spencer Moore",
+        "position": "QB/TE"
+      },
+      {
+        "name": "Jordan Griffith-Simmon",
+        "position": "OL/DL"
+      },
+      {
+        "name": "Adam Bardak",
+        "position": "TE/LB"
       }
     ],
     "2022": [
       {
-        "name": "Kellyn Gerenstein QB Casey Scroggins WR/DB Jordan Griffith",
-        "position": "Simmon OL Johnathan Thiele RB Colby Stahl LB"
+        "name": "Kellyn Gerenstein",
+        "position": "QB"
+      },
+      {
+        "name": "Casey Scroggins",
+        "position": "WR/DB"
+      },
+      {
+        "name": "Jordan Griffith-Simmon",
+        "position": "OL"
+      },
+      {
+        "name": "Johnathan Thiele",
+        "position": "RB"
+      },
+      {
+        "name": "Colby Stahl",
+        "position": "LB"
       }
     ],
     "2023": [
       {
-        "name": "Spencer Moore QB Sam Dominguez OL Zach Davis OL Christian Allen LB Jackson Rittman LB Johnathan Thiele RB",
-        "position": null
+        "name": "Spencer Moore",
+        "position": "QB"
+      },
+      {
+        "name": "Sam Dominguez",
+        "position": "OL"
+      },
+      {
+        "name": "Zach Davis",
+        "position": "OL"
+      },
+      {
+        "name": "Christian Allen",
+        "position": "LB"
+      },
+      {
+        "name": "Jackson Rittman",
+        "position": "LB"
+      },
+      {
+        "name": "Johnathan Thiele",
+        "position": "RB"
       }
     ],
     "2024": [
       {
-        "name": "Zach Davis OL Christian Allen LB Tyler Beckman LB",
-        "position": null
+        "name": "Zach Davis",
+        "position": "OL"
       },
       {
-        "name": "Jackson Rittman OL/LB Johnathan Thiele RB Matthew Humphreys DL",
-        "position": null
+        "name": "Christian Allen",
+        "position": "LB"
+      },
+      {
+        "name": "Tyler Beckman",
+        "position": "LB"
+      },
+      {
+        "name": "Jackson Rittman",
+        "position": "OL/LB"
+      },
+      {
+        "name": "Johnathan Thiele",
+        "position": "RB"
+      },
+      {
+        "name": "Matthew Humphreys",
+        "position": "DL"
+      }
+    ],
+    "2025": [
+      {
+        "name": "Tyler Beckman",
+        "position": "LB"
+      },
+      {
+        "name": "Niko Pappas",
+        "position": "QB"
+      },
+      {
+        "name": "Cameron Fries",
+        "position": "C"
+      },
+      {
+        "name": "Matthew Humphreys",
+        "position": "DL"
+      },
+      {
+        "name": "Joshua Clemons",
+        "position": "DB"
       }
     ]
   },

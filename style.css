@@ -41,11 +41,28 @@ html, body {
     margin-right: -50vw;
     width: 100vw;
     max-width: none;
+    min-width: 100vw;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+  }
+  
+  /* Force header to break out of any parent container constraints */
+  .site-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50vw;
+    right: -50vw;
+    width: 100vw;
+    height: 100%;
+    background: inherit;
+    z-index: -1;
   }
   
   .site-header .container {
     max-width: none;
     width: 100%;
+    min-width: 100%;
     padding: 12px 16px;
     margin: 0;
     box-sizing: border-box;
@@ -62,6 +79,7 @@ html, body {
   .site-header .top-nav {
     max-width: none;
   }
+  
 }
 
 /* Extra small screens - force full width */
@@ -74,6 +92,7 @@ html, body {
     width: 100vw;
     margin: 0;
     z-index: 1000;
+    transform: none;
   }
   
   .site-header .container {
@@ -86,6 +105,7 @@ html, body {
     padding-top: 80px; /* Account for fixed header */
   }
 }
+
 
 .site-header {
   background: linear-gradient(180deg, var(--panel-2), var(--panel));
