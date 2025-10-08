@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>All-Americans and Captains — Ohio State Club Football</title>
   <meta name="description" content="Ohio State Club Football All-Americans and Team Captains across first, second, and honorable mention teams.">
+  <link rel="icon" type="image/png" href="Images/2024NattyRing.png">
   <link rel="preload" href="data.json" as="fetch" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -116,53 +117,45 @@
 
     const captainsList = document.getElementById("captainsList");
     
-    // Group captains by 3-year periods
+    // Custom grouping as requested
     const captainsData = data.team_captains || {};
-    const years = Object.keys(captainsData).sort((a, b) => {
-      // Handle range years like "2009-2011"
-      const aStart = parseInt(a.split('-')[0]);
-      const bStart = parseInt(b.split('-')[0]);
-      return bStart - aStart; // Sort descending
-    });
+    const customGroups = [
+      ["2024", "2023", "2022"], // 2024-2022
+      ["2021", "2019", "2018"], // 2021-2018 (skipping 2020)
+      ["2017", "2016", "2015"], // 2017-2015
+      ["2014", "2013", "2012", "2009-2011"] // 2014-2009 (combining 2009-2011 range)
+    ];
     
-    // Group years into 3-year periods
-    const yearGroups = [];
-    for (let i = 0; i < years.length; i += 3) {
-      const group = years.slice(i, i + 3);
-      yearGroups.push(group);
-    }
-    
-    yearGroups.forEach(group => {
+    customGroups.forEach(group => {
       const card = document.createElement("article");
       card.className = "card";
       
-      const h3 = document.createElement("h3");
-      const startYear = group[0].split('-')[0];
-      const endYear = group[group.length - 1].split('-')[0];
-      h3.textContent = `${startYear}-${endYear}`;
-      card.appendChild(h3);
-      
       group.forEach(year => {
         const items = captainsData[year] || [];
-        const yearDiv = document.createElement("div");
-        yearDiv.className = "year-group";
-        
-        const yearH4 = document.createElement("h4");
-        yearH4.textContent = year;
-        yearDiv.appendChild(yearH4);
-        
-        const ul = document.createElement("ul");
-        ul.className = "compact";
-        items.forEach(item => {
-          const li = document.createElement("li");
-          li.textContent = item.position ? `${item.name} — ${item.position}` : item.name;
-          ul.appendChild(li);
-        });
-        yearDiv.appendChild(ul);
-        card.appendChild(yearDiv);
+        if (items.length > 0) { // Only add if there are captains for this year
+          const yearDiv = document.createElement("div");
+          yearDiv.className = "year-group";
+          
+          const yearH4 = document.createElement("h4");
+          yearH4.textContent = year;
+          yearDiv.appendChild(yearH4);
+          
+          const ul = document.createElement("ul");
+          ul.className = "compact";
+          items.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = item.position ? `${item.name} — ${item.position}` : item.name;
+            ul.appendChild(li);
+          });
+          yearDiv.appendChild(ul);
+          card.appendChild(yearDiv);
+        }
       });
       
-      captainsList.appendChild(card);
+      // Only append card if it has content
+      if (card.children.length > 0) {
+        captainsList.appendChild(card);
+      }
     });
   }
   init().catch(err => {

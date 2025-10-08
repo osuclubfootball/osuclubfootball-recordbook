@@ -1258,6 +1258,81 @@
         }
         
       ]
+    },
+    {
+      "season_header": "2025 (TBD)",
+      "games": [
+        {
+          "outcome": "W",
+          "site": "home",
+          "team_a": "George Mason",
+          "score_a": 3,
+          "team_b": "OHIO STATE",
+          "score_b": 40,
+          "note": null,
+          "raw": "George Mason 3 @ OHIO STATE 40"
+        },
+        {
+          "outcome": "W",
+          "site": "home",
+          "team_a": "Michigan State",
+          "score_a": 7,
+          "team_b": "OHIO STATE",
+          "score_b": 45,
+          "note": null,
+          "raw": "Michigan State 7 @ OHIO STATE 45"
+        },
+        {
+          "outcome": "W",
+          "site": "home",
+          "team_a": "Denison (JV)",
+          "score_a": 0,
+          "team_b": "OHIO STATE",
+          "score_b": 2,
+          "note": "Forfeit",
+          "raw": "Denison (JV) 0 @ OHIO STATE 2 (Forfeit)"
+        },
+        {
+          "outcome": "W",
+          "site": "away",
+          "team_a": "OHIO STATE",
+          "score_a": 0,
+          "team_b": "Ohio Wesleyan JV",
+          "score_b": 0,
+          "note": null,
+          "raw": "OHIO STATE 0 @ Ohio Wesleyan JV 0"
+        },
+        {
+          "outcome": "W",
+          "site": "away",
+          "team_a": "OHIO STATE",
+          "score_a": 0,
+          "team_b": "Wright State",
+          "score_b": 0,
+          "note": null,
+          "raw": "OHIO STATE 0 @ Wright State 0"
+        },
+        {
+          "outcome": "W",
+          "site": "away",
+          "team_a": "OHIO STATE",
+          "score_a": 0,
+          "team_b": "Toledo",
+          "score_b": 0,
+          "note": null,
+          "raw": "OHIO STATE 0 @ Toledo 0"
+        },
+        {
+          "outcome": "W",
+          "site": "away",
+          "team_a": "OHIO STATE",
+          "score_a": 0,
+          "team_b": "Cincinnati United",
+          "score_b": 0,
+          "note": null,
+          "raw": "OHIO STATE 0 @ Cincinnati United 0"
+        }
+      ]
     }
   ],
   "record_vs_opponents": {
@@ -1306,7 +1381,7 @@
       },
       {
         "opponent": "Denison (JV)",
-        "won": 3,
+        "won": 4,
         "lost": 2,
         "first_meeting": 2012,
         "last_meeting": 2023
@@ -1320,7 +1395,7 @@
       },
       {
         "opponent": "George Mason",
-        "won": 7,
+        "won": 8,
         "lost": 0,
         "first_meeting": 2013,
         "last_meeting": 2022
@@ -1362,7 +1437,7 @@
       },
       {
         "opponent": "Michigan State",
-        "won": 4,
+        "won": 5,
         "lost": 1,
         "first_meeting": 2015,
         "last_meeting": 2024
