@@ -1293,7 +1293,7 @@
           "raw": "Denison (JV) 0 @ OHIO STATE 2 (Forfeit)"
         },
         {
-          "outcome": "W",
+          "outcome": "-",
           "site": "away",
           "team_a": "OHIO STATE",
           "score_a": 0,
@@ -1303,7 +1303,7 @@
           "raw": "OHIO STATE 0 @ Ohio Wesleyan JV 0"
         },
         {
-          "outcome": "W",
+          "outcome": "-",
           "site": "away",
           "team_a": "OHIO STATE",
           "score_a": 0,
@@ -1313,7 +1313,7 @@
           "raw": "OHIO STATE 0 @ Wright State 0"
         },
         {
-          "outcome": "W",
+          "outcome": "-",
           "site": "away",
           "team_a": "OHIO STATE",
           "score_a": 0,
@@ -1323,7 +1323,7 @@
           "raw": "OHIO STATE 0 @ Toledo 0"
         },
         {
-          "outcome": "W",
+          "outcome": "-",
           "site": "away",
           "team_a": "OHIO STATE",
           "score_a": 0,
@@ -1561,16 +1561,28 @@
       "narrative": "The first NCFA Defensive Player of the Year in program history, Humphreys put together a stellar campaign despite injuring his leg in the regular season finale against Wittenberg. He led the Great Lakes Conference in sacks with 10.0, which was also good for second in the NCFA. He posted 34 total tackles with 14.5 of them going for loss. His best game came against Wright State, in which he posted seven total tackles and 4.5 sacks, the second most in single game history for Ohio State. Humphreys builds on his first season as a Buckeye in 2023, in which he was named a Second Team All-American. His 10 sacks in 2024 were good for second-most all-time in team history."
     },
     {
-      "title": "2024 NCFA National Championship Game MVP Tight End, Aidan Donovan",
-      "role": null,
-      "person": null,
+      "title": "2024 NCFA National Championship Game MVP",
+      "role": "Tight End",
+      "person": "Aidan Donovan",
       "narrative": "Aidan Donovan helped the Buckeyes end their two-game losing streak in the NCFA National Championship Game with a dominant performance against Clayton State in 2024.\nDonovan recorded three rushing touchdowns in the 20-13 win, and also caught three passes for 38 yards. He also recorded a tackle on special teams and split kickoff duties at kicker in the victory, Ohio States third national title."
     },
     {
       "title": "2023 NCFA Offensive Player of the Year",
       "role": "Quarterback",
       "person": "Spencer Moore",
-      "narrative": "The ultimate team player, Spencer Moore waited four years for his opportunity to finally be QB1 and his 2023 season did not disappoint. He broke the NCFA single-season record for passing touchdowns with 32 and threw for 2,209 yards, just the second player in league history to eclipse the 2,000 yard mark. He led the Buckeyes to their fourth straight national title game and fourth conference crown, scoring 36 total touchdowns, which ranks third in NCFA history.\n\n\n\n2019, 2022 NCFA Offensive Player of the Year, 2021 NCFA National Championship Game MVP Quarterback, Kellyn Gerenstein\nIn his sophomore season, Kellyn Gerenstein led the NCFA in passing yards, passing touchdowns and completion percentage on his way to becoming the first player in program history to win a national award. In 2021, he led Ohio State to a repeat title, scoring 5 TDs in the championship game. He is the only player in league history to win an NCFA Offensive or Defensive MVP more than once. In 2022, he tallied 37 total touchdowns, which ranks second in NCFA history."
+      "narrative": "The ultimate team player, Spencer Moore waited four years for his opportunity to finally be QB1 and his 2023 season did not disappoint. He broke the NCFA single-season record for passing touchdowns with 32 and threw for 2,209 yards, just the second player in league history to eclipse the 2,000 yard mark. He led the Buckeyes to their fourth straight national title game and fourth conference crown, scoring 36 total touchdowns, which ranks third in NCFA history."
+    },
+    {
+      "title": "2019, 2022 NCFA Offensive Player of the Year",
+      "role": "Quarterback",
+      "person": "Kellyn Gerenstein",
+      "narrative": "In his sophomore season, Kellyn Gerenstein led the NCFA in passing yards, passing touchdowns and completion percentage on his way to becoming the first player in program history to win a national award. In 2021, he led Ohio State to a repeat title, scoring 5 TDs in the championship game. He is the only player in league history to win an NCFA Offensive or Defensive MVP more than once. In 2022, he tallied 37 total touchdowns, which ranks second in NCFA history."
+    },
+    {
+      "title": "2021 NCFA National Championship Game MVP",
+      "role": "Quarterback",
+      "person": "Kellyn Gerenstein",
+      "narrative": "Kellyn Gerenstein led Ohio State to a repeat title in 2021, scoring 5 TDs in the championship game. He is the only player in league history to win an NCFA Offensive or Defensive MVP more than once."
     },
     {
       "title": "2019 NCFA National Championship Game MVP",
@@ -1592,8 +1604,8 @@
     },
     {
       "title": "2019 NCFA Coach of the Year",
-      "role": "James Grega",
-      "person": "Jr.",
+      "role": "Head Coach",
+      "person": "James Grega Jr.",
       "narrative": "After taking over as head coach in 2018, James Grega led the Buckeyes to their first national championship in 2019. He was named the NCFA Coach of the Year after Ohio State finished his second year at the helm with a perfect 9-0 record. It was just the second undefeated season in program history and the first since joining the NCFA in 2012. Also serving as offensive coordinator and QBs coach, Ohio State averaged 36.9 points per game and quarterback Kellyn Gerenstein was named the NCFAs Offensive Player of the Year.\nGrega, 27, was the youngest coach to win the award."
     }
   ],
