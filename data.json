@@ -1524,75 +1524,585 @@
   ],
   "all_americans": {
     "first_team": {
-      "2013": [
+      "2024": [
         {
-          "name": "(Left) Defensive lineman Chase Gasser was the first 3x First Team All",
-          "position": "American in school history"
+          "name": "Zach Davis",
+          "position": "OT"
+        },
+        {
+          "name": "Jackson Rittman",
+          "position": "OG"
+        },
+        {
+          "name": "Cam Fries",
+          "position": "C"
+        },
+        {
+          "name": "Matthew Humphreys",
+          "position": "DE"
+        },
+        {
+          "name": "Ryan Keenan",
+          "position": "LB"
+        },
+        {
+          "name": "David Rive",
+          "position": "K"
+        },
+        {
+          "name": "Jalen Haley",
+          "position": "KR"
         }
       ],
-      "2019": [
+      "2023": [
         {
-          "name": "Jordan Griffith",
-          "position": "Simmon OT Chase Gasser DT"
+          "name": "Spencer Moore",
+          "position": "QB"
+        },
+        {
+          "name": "Abdou Keita",
+          "position": "WR"
+        },
+        {
+          "name": "Zach Hayes",
+          "position": "WR"
+        },
+        {
+          "name": "Sam Dominguez",
+          "position": "OT"
+        },
+        {
+          "name": "Cam Fries",
+          "position": "C"
+        },
+        {
+          "name": "Tyler Beckman",
+          "position": "LB"
+        },
+        {
+          "name": "Glorien Gough",
+          "position": "DB"
+        },
+        {
+          "name": "Daniel Zirkle",
+          "position": "LS"
+        }
+      ],
+      "2022": [
+        {
+          "name": "Kellyn Gerenstein",
+          "position": "QB"
+        },
+        {
+          "name": "Jalen Haley",
+          "position": "RB"
+        },
+        {
+          "name": "Abdou Keita",
+          "position": "WR"
+        },
+        {
+          "name": "Sam Dominguez",
+          "position": "OT"
+        },
+        {
+          "name": "Jackson Rittman",
+          "position": "OG"
+        },
+        {
+          "name": "Casey Scroggins",
+          "position": "All-Purpose"
+        },
+        {
+          "name": "David Rive",
+          "position": "Kicker"
         }
       ],
       "2021": [
         {
-          "name": "Jordan Griffith",
-          "position": "Simmon OT Jackson RIttman OG"
+          "name": "Jalen Haley",
+          "position": "RB"
+        },
+        {
+          "name": "Casey Scroggins",
+          "position": "WR"
+        },
+        {
+          "name": "Jordan Griffith-Simmon",
+          "position": "OT"
+        },
+        {
+          "name": "Jackson Rittman",
+          "position": "OG"
+        },
+        {
+          "name": "Sam Backenstoe",
+          "position": "C"
+        },
+        {
+          "name": "Chris Karras",
+          "position": "DE"
+        },
+        {
+          "name": "Casey Scroggins",
+          "position": "Safety"
+        },
+        {
+          "name": "David Rive",
+          "position": "Kicker"
+        },
+        {
+          "name": "David Cooper",
+          "position": "Punter"
+        },
+        {
+          "name": "Jalen Haley",
+          "position": "Returner"
         }
       ],
-      "2022": [
+      "2019": [
         {
-          "name": "Casey Scroggins All",
-          "position": "Purpose David Rive Kicker"
+          "name": "Kellyn Gerenstein",
+          "position": "QB"
+        },
+        {
+          "name": "Geoff Green II",
+          "position": "WR"
+        },
+        {
+          "name": "Jordan Griffith-Simmon",
+          "position": "OT"
+        },
+        {
+          "name": "Chase Gasser",
+          "position": "DT"
+        },
+        {
+          "name": "DaJuan Seward",
+          "position": "Safety"
+        },
+        {
+          "name": "De'Shawn White",
+          "position": "Returner"
+        },
+        {
+          "name": "Alex Strohm",
+          "position": "Kicker"
         }
-      ]
-    },
-    "second_team": {
-      "2013": [
+      ],
+      "2018": [
         {
-          "name": "Matt Taylor RB Andrew Francis Center T",
-          "position": "Jay Queen LB George Shapiro Safety"
+          "name": "Chris Booker",
+          "position": "WR"
+        },
+        {
+          "name": "Hamzah Masood",
+          "position": "OT"
+        },
+        {
+          "name": "Chase Gasser",
+          "position": "DT"
         }
       ],
       "2017": [
         {
-          "name": "Tavontae Norwood S, All",
-          "position": "Purpose Drey Bowden CB"
+          "name": "Hamzah Masood",
+          "position": "OT"
+        },
+        {
+          "name": "Chase Gasser",
+          "position": "DT"
+        },
+        {
+          "name": "Kody Brown",
+          "position": "LB"
+        },
+        {
+          "name": "Lorenzo King",
+          "position": "Kicker/Punter"
+        },
+        {
+          "name": "Tavontae Norwood",
+          "position": "Returner"
+        }
+      ],
+      "2013": [
+        {
+          "name": "Chris Kuzak",
+          "position": "DL"
+        }
+      ]
+    },
+    "second_team": {
+      "2024": [
+        {
+          "name": "Niko Pappas",
+          "position": "QB"
+        },
+        {
+          "name": "Johnathan Thiele",
+          "position": "RB"
+        },
+        {
+          "name": "Aidan Donovan",
+          "position": "TE"
+        },
+        {
+          "name": "Jalen Haley",
+          "position": "WR"
+        },
+        {
+          "name": "JP Naylor",
+          "position": "WR"
+        },
+        {
+          "name": "Daniel Sankiewicz",
+          "position": "OT"
+        },
+        {
+          "name": "Trey Jones",
+          "position": "DE"
+        },
+        {
+          "name": "Ryan Globokar",
+          "position": "LB"
+        },
+        {
+          "name": "JP Naylor",
+          "position": "CB/LS"
+        }
+      ],
+      "2023": [
+        {
+          "name": "Jack Laing",
+          "position": "RB"
+        },
+        {
+          "name": "Daniel Zirkle",
+          "position": "OT"
+        },
+        {
+          "name": "Zach Davis",
+          "position": "OG"
+        },
+        {
+          "name": "Matt Humphreys",
+          "position": "DL"
+        },
+        {
+          "name": "James Smith",
+          "position": "DL"
+        },
+        {
+          "name": "Christian Allen",
+          "position": "LB"
+        },
+        {
+          "name": "David Rive",
+          "position": "K"
         }
       ],
       "2022": [
         {
-          "name": "Jordan Griffith",
-          "position": "Simmon OT Lance Wickham LB"
+          "name": "Jordan Griffith-Simmon",
+          "position": "OT"
+        },
+        {
+          "name": "Lance Wickham",
+          "position": "LB"
+        },
+        {
+          "name": "James Smith",
+          "position": "DL"
+        },
+        {
+          "name": "Trey Jones",
+          "position": "DL"
+        }
+      ],
+      "2021": [
+        {
+          "name": "Kellyn Gerenstein",
+          "position": "QB"
+        },
+        {
+          "name": "Adam Bardak",
+          "position": "TE"
+        },
+        {
+          "name": "Dierre Blash",
+          "position": "DE"
+        },
+        {
+          "name": "Colby Stahl",
+          "position": "LB"
+        },
+        {
+          "name": "Hunter St. Andre",
+          "position": "LB"
+        },
+        {
+          "name": "Jeremiah Croom",
+          "position": "CB"
+        },
+        {
+          "name": "Kaleb Slover",
+          "position": "Safety"
+        }
+      ],
+      "2019": [
+        {
+          "name": "Madu Eneli",
+          "position": "RB"
+        },
+        {
+          "name": "Nick Untch",
+          "position": "OG"
+        },
+        {
+          "name": "Kevin Creamer",
+          "position": "DE"
+        },
+        {
+          "name": "Xavier Thayer",
+          "position": "LB"
+        },
+        {
+          "name": "Casey Scroggins",
+          "position": "CB"
+        },
+        {
+          "name": "De'Shawn White",
+          "position": "CB"
+        },
+        {
+          "name": "Sam Frank",
+          "position": "Safety"
+        },
+        {
+          "name": "Lorenzo King",
+          "position": "Punter"
+        }
+      ],
+      "2018": [
+        {
+          "name": "Joshua Farley",
+          "position": "LB"
+        },
+        {
+          "name": "Lorenzo King",
+          "position": "Punter"
+        }
+      ],
+      "2017": [
+        {
+          "name": "Madu Eneli",
+          "position": "RB"
+        },
+        {
+          "name": "Mike Fenstermaker",
+          "position": "DE"
+        },
+        {
+          "name": "Tavontae Norwood",
+          "position": "S, All-Purpose"
+        },
+        {
+          "name": "Drey Bowden",
+          "position": "CB"
+        }
+      ],
+      "2016": [
+        {
+          "name": "Jeffie Johnson",
+          "position": "RB"
+        },
+        {
+          "name": "Hamzah Masood",
+          "position": "OT"
+        },
+        {
+          "name": "Ken Merchant",
+          "position": "CB"
+        }
+      ],
+      "2015": [
+        {
+          "name": "Will Madley",
+          "position": "OL"
+        }
+      ],
+      "2013": [
+        {
+          "name": "Matt Taylor",
+          "position": "RB"
+        },
+        {
+          "name": "Andrew Francis",
+          "position": "Center"
+        },
+        {
+          "name": "T-Jay Queen",
+          "position": "LB"
+        },
+        {
+          "name": "George Shapiro",
+          "position": "Safety"
         }
       ]
     },
     "honorable_mention": {
       "2023": [
         {
-          "name": "(Above) Ohio States 2023 defense featured eight Honorable Mention All",
-          "position": "Americans, including five defensive backs."
+          "name": "JR Burton",
+          "position": "RB"
+        },
+        {
+          "name": "David Cooper",
+          "position": "WR/P"
+        },
+        {
+          "name": "Trey Jones",
+          "position": "DE"
+        },
+        {
+          "name": "Daniel Sankiewicz",
+          "position": "DE"
+        },
+        {
+          "name": "Jackson Rittman",
+          "position": "LB"
+        },
+        {
+          "name": "Patrick Parrish",
+          "position": "Safety"
+        },
+        {
+          "name": "Zach Hayes",
+          "position": "Safety"
+        },
+        {
+          "name": "Joe Umba",
+          "position": "CB"
+        },
+        {
+          "name": "Marcellus McLellan",
+          "position": "CB"
+        },
+        {
+          "name": "Reagan Little",
+          "position": "CB"
         }
       ]
     }
   },
   "academic_all_americans": {
-    "2014": [
+    "2024": [
       {
-        "name": "(Top) Linebacker Tyler Gabalski (2013",
-        "position": "14) was the first Academic All-American in program history"
+        "name": "Johnathan Thiele",
+        "position": "RB"
       },
       {
-        "name": "(Below) Victor Mikus, Ryan Walsh and Nick Untch ended a five",
-        "position": "year drought of Academic All-Americans in 2019"
+        "name": "Sam Garber",
+        "position": "WR"
+      }
+    ],
+    "2023": [
+      {
+        "name": "Zach Hayes",
+        "position": "WR/DB"
+      },
+      {
+        "name": "Jorge Castillo Rueda",
+        "position": "WR"
+      },
+      {
+        "name": "Sam Garber",
+        "position": "WR"
+      },
+      {
+        "name": "Jalen Haley",
+        "position": "WR"
+      },
+      {
+        "name": "Cam Fries",
+        "position": "OL"
+      },
+      {
+        "name": "Mark Price",
+        "position": "DL"
+      },
+      {
+        "name": "Tyler Beckman",
+        "position": "LB"
+      },
+      {
+        "name": "Joe Umba",
+        "position": "DB"
+      }
+    ],
+    "2022": [
+      {
+        "name": "Jalen Haley",
+        "position": "RB"
+      },
+      {
+        "name": "Joe Umba",
+        "position": "DB"
+      }
+    ],
+    "2021": [
+      {
+        "name": "Johnathan Thiele",
+        "position": "RB"
+      },
+      {
+        "name": "Casey Scroggins",
+        "position": "WR"
+      },
+      {
+        "name": "Adam Bardak",
+        "position": "TE"
+      },
+      {
+        "name": "Spencer Moore",
+        "position": "TE"
+      },
+      {
+        "name": "Samuel Dominguez",
+        "position": "OL"
+      },
+      {
+        "name": "Hunter St. Andre",
+        "position": "LB"
+      },
+      {
+        "name": "Colby Stahl",
+        "position": "LB"
+      },
+      {
+        "name": "Jeremiah Croom",
+        "position": "DB"
       }
     ],
     "2019": [
       {
-        "name": "Mikus",
+        "name": "Nick Untch",
+        "position": "OG"
+      },
+      {
+        "name": "Ryan Walsh",
+        "position": "Center"
+      },
+      {
+        "name": "Victor Mikus",
         "position": "DE"
+      }
+    ],
+    "2014": [
+      {
+        "name": "Tyler Gabalski",
+        "position": "DE/LB"
       }
     ]
   },

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>All-Americans — Ohio State Club Football</title>
-  <meta name="description" content="Ohio State Club Football All-Americans across first, second, and honorable mention teams.">
+  <title>All-Americans and Captains — Ohio State Club Football</title>
+  <meta name="description" content="Ohio State Club Football All-Americans and Team Captains across first, second, and honorable mention teams.">
   <link rel="preload" href="data.json" as="fetch" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -12,14 +12,14 @@
   <header class="site-header">
     <div class="container">
       <h1>Ohio State Club Football Record Book</h1>
-      <p class="subtitle">All-Americans</p>
+      <p class="subtitle">All-Americans and Captains</p>
       <nav class="top-nav" aria-label="Sections">
         <a href="index.html">Home</a>
         <a href="team-records.html">Team Records</a>
         <a href="game-by-game.html">Game-by-Game</a>
         <a href="record-vs-opponents.html">Record vs. Opponents</a>
         <a href="awards.html">Awards</a>
-        <a href="all-americans.html">All-Americans</a>
+        <a href="all-americans.html">All-Americans and Captains</a>
         <a href="stats.html">Stat Leaders</a>
       </nav>
       
@@ -50,7 +50,7 @@
     </section>
     <section id="captains" aria-labelledby="captains-title">
       <h2 id="captains-title">Team Captains</h2>
-      <div id="captainsList" class="year-groups"></div>
+      <div id="captainsList" class="grid three"></div>
     </section>
   </main>
 
@@ -115,18 +115,54 @@
     });
 
     const captainsList = document.getElementById("captainsList");
-    Object.keys(data.team_captains || {}).sort().forEach(year => {
-      const items = data.team_captains[year] || [];
-      const entries = items.map(x => x.position ? `${x.name} — ${x.position}` : x.name);
-      const wrap = document.createElement("div");
-      wrap.className = "year-group";
-      const h = document.createElement("h3");
-      h.textContent = year;
-      const ul = document.createElement("ul");
-      ul.className = "compact";
-      entries.forEach(t => { const li = document.createElement("li"); li.textContent = t; ul.appendChild(li); });
-      wrap.append(h, ul);
-      captainsList.appendChild(wrap);
+    
+    // Group captains by 3-year periods
+    const captainsData = data.team_captains || {};
+    const years = Object.keys(captainsData).sort((a, b) => {
+      // Handle range years like "2009-2011"
+      const aStart = parseInt(a.split('-')[0]);
+      const bStart = parseInt(b.split('-')[0]);
+      return bStart - aStart; // Sort descending
+    });
+    
+    // Group years into 3-year periods
+    const yearGroups = [];
+    for (let i = 0; i < years.length; i += 3) {
+      const group = years.slice(i, i + 3);
+      yearGroups.push(group);
+    }
+    
+    yearGroups.forEach(group => {
+      const card = document.createElement("article");
+      card.className = "card";
+      
+      const h3 = document.createElement("h3");
+      const startYear = group[0].split('-')[0];
+      const endYear = group[group.length - 1].split('-')[0];
+      h3.textContent = `${startYear}-${endYear}`;
+      card.appendChild(h3);
+      
+      group.forEach(year => {
+        const items = captainsData[year] || [];
+        const yearDiv = document.createElement("div");
+        yearDiv.className = "year-group";
+        
+        const yearH4 = document.createElement("h4");
+        yearH4.textContent = year;
+        yearDiv.appendChild(yearH4);
+        
+        const ul = document.createElement("ul");
+        ul.className = "compact";
+        items.forEach(item => {
+          const li = document.createElement("li");
+          li.textContent = item.position ? `${item.name} — ${item.position}` : item.name;
+          ul.appendChild(li);
+        });
+        yearDiv.appendChild(ul);
+        card.appendChild(yearDiv);
+      });
+      
+      captainsList.appendChild(card);
     });
   }
   init().catch(err => {
