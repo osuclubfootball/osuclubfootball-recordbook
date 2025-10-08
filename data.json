@@ -227,7 +227,6 @@
           "score_a": 34,
           "team_b": "OHIO STATE",
           "score_b": 39,
-          "markers": null,
           "note": null,
           "raw": "UM-Flint 34 @ OHIO STATE 39"
         },
@@ -238,7 +237,6 @@
           "score_a": 27,
           "team_b": "Wright State",
           "score_b": 17,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 27 @ Wright State 17"
         },
@@ -249,7 +247,6 @@
           "score_a": 6,
           "team_b": "Coppin State",
           "score_b": 41,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 6 @ Coppin State 41"
         },
@@ -260,7 +257,6 @@
           "score_a": 14,
           "team_b": "Denison (JV)",
           "score_b": 23,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 14 @ Denison (JV) 23"
         },
@@ -271,7 +267,6 @@
           "score_a": 0,
           "team_b": "SIUe",
           "score_b": 2,
-          "markers": null,
           "note": "Forfeit",
           "raw": "OHIO STATE 0 @ SIUe 2 (Forfeit)"
         },
@@ -282,7 +277,6 @@
           "score_a": 38,
           "team_b": "OHIO STATE",
           "score_b": 14,
-          "markers": null,
           "note": null,
           "raw": "Miami (OH) 38 @ OHIO STATE 14"
         },
@@ -293,7 +287,6 @@
           "score_a": 7,
           "team_b": "Onondaga",
           "score_b": 55,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 7 @ Onondaga 55"
         },
@@ -304,7 +297,6 @@
           "score_a": 0,
           "team_b": "OHIO STATE",
           "score_b": 2,
-          "markers": null,
           "note": "Forfeit",
           "raw": "Xavier 0 @ OHIO STATE 2 (Forfeit)"
         }
@@ -320,7 +312,6 @@
           "score_a": 12,
           "team_b": "OHIO STATE",
           "score_b": 19,
-          "markers": null,
           "note": null,
           "raw": "RMU-Peoria 12 @ OHIO STATE 19"
         },
@@ -331,7 +322,6 @@
           "score_a": 29,
           "team_b": "George Mason",
           "score_b": 14,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 29 @ George Mason 14"
         },
@@ -342,8 +332,7 @@
           "score_a": 20,
           "team_b": "OHIO STATE",
           "score_b": 0,
-          "markers": ["*"],
-          "note": null,
+          "note": "Forfeit",
           "raw": "Coppin State 20 @ OHIO STATE 0*"
         },
         {
@@ -353,7 +342,6 @@
           "score_a": 31,
           "team_b": "Loyola Chicago",
           "score_b": 6,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 31 @ Loyola Chicago 6"
         },
@@ -364,7 +352,6 @@
           "score_a": 31,
           "team_b": "Denison (JV)",
           "score_b": 14,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 31 @ Denison (JV) 14"
         },
@@ -375,7 +362,6 @@
           "score_a": 0,
           "team_b": "OHIO STATE",
           "score_b": 2,
-          "markers": null,
           "note": "Forfeit",
           "raw": "Xavier 0 @ OHIO STATE 2 (Forfeit)"
         },
@@ -386,7 +372,6 @@
           "score_a": 14,
           "team_b": "OHIO STATE",
           "score_b": 49,
-          "markers": null,
           "note": null,
           "raw": "Wright State 14 @ OHIO STATE 49"
         },
@@ -397,7 +382,6 @@
           "score_a": 7,
           "team_b": "Miami (OH)",
           "score_b": 21,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 7 @ Miami (OH) 21"
         },
@@ -408,7 +392,6 @@
           "score_a": 2,
           "team_b": "OHIO STATE",
           "score_b": 0,
-          "markers": null,
           "note": "Forfeit",
           "raw": "Oakland 2 @ OHIO STATE 0 (Forfeit)"
         },
@@ -419,7 +402,6 @@
           "score_a": 13,
           "team_b": "UM-Flint",
           "score_b": 28,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 13 @ UM-Flint 28"
         }
@@ -435,7 +417,6 @@
           "score_a": 0,
           "team_b": "RMU-Peoria",
           "score_b": 2,
-          "markers": null,
           "note": "Forfeit",
           "raw": "OHIO STATE 0 @ RMU-Peoria 2 (Forfeit)"
         },
@@ -446,7 +427,6 @@
           "score_a": 14,
           "team_b": "Wright State",
           "score_b": 18,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 14 @ Wright State 18"
         },
@@ -457,7 +437,6 @@
           "score_a": 14,
           "team_b": "OHIO STATE",
           "score_b": 20,
-          "markers": null,
           "note": null,
           "raw": "George Mason 14 @ OHIO STATE 20"
         },
@@ -468,7 +447,6 @@
           "score_a": 3,
           "team_b": "Oakland",
           "score_b": 48,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 3 @ Oakland 48"
         },
@@ -479,7 +457,6 @@
           "score_a": 34,
           "team_b": "OHIO STATE",
           "score_b": 8,
-          "markers": null,
           "note": null,
           "raw": "Miami (OH) 34 @ OHIO STATE 8"
         },
@@ -490,7 +467,6 @@
           "score_a": 0,
           "team_b": "OHIO STATE",
           "score_b": 2,
-          "markers": null,
           "note": "Forfeit",
           "raw": "UM-Flint 0 @ OHIO STATE 2 (Forfeit)"
         },
@@ -501,7 +477,6 @@
           "score_a": 24,
           "team_b": "OHIO STATE",
           "score_b": 27,
-          "markers": null,
           "note": null,
           "raw": "Milwaukee 24 @ OHIO STATE 27"
         }
@@ -517,7 +492,6 @@
           "score_a": 15,
           "team_b": "Longwood",
           "score_b": 6,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 15 @ Longwood 6"
         },
@@ -528,7 +502,6 @@
           "score_a": 0,
           "team_b": "Michigan State",
           "score_b": 45,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 0 @ Michigan State 45"
         },
@@ -539,7 +512,6 @@
           "score_a": 14,
           "team_b": "OHIO STATE",
           "score_b": 22,
-          "markers": null,
           "note": null,
           "raw": "Wright State 14 @ OHIO STATE 22"
         },
@@ -550,7 +522,6 @@
           "score_a": 0,
           "team_b": "Miami (OH)",
           "score_b": 40,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 0 @ Miami (OH) 40"
         },
@@ -561,7 +532,6 @@
           "score_a": 28,
           "team_b": "OHIO STATE",
           "score_b": 7,
-          "markers": null,
           "note": null,
           "raw": "Oakland 28 @ OHIO STATE 7"
         },
@@ -572,7 +542,6 @@
           "score_a": 0,
           "team_b": "OHIO STATE",
           "score_b": 30,
-          "markers": null,
           "note": null,
           "raw": "UM-Flint 0 @ OHIO STATE 30"
         }
@@ -599,7 +568,6 @@
           "score_a": 54,
           "team_b": "SIUe",
           "score_b": 0,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 54 @ SIUe 0"
         },
@@ -610,7 +578,6 @@
           "score_a": 7,
           "team_b": "OHIO STATE",
           "score_b": 42,
-          "markers": null,
           "note": null,
           "raw": "UNCG 7 @ OHIO STATE 42"
         },
@@ -621,7 +588,6 @@
           "score_a": 13,
           "team_b": "Oakland",
           "score_b": 21,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 13 @ Oakland 21"
         },
@@ -632,7 +598,6 @@
           "score_a": 13,
           "team_b": "OHIO STATE",
           "score_b": 0,
-          "markers": null,
           "note": null,
           "raw": "Miami (OH) 13 @ OHIO STATE 0"
         },
@@ -643,7 +608,6 @@
           "score_a": 8,
           "team_b": "Wright State",
           "score_b": 7,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 8 @ Wright State 7"
         },
@@ -654,7 +618,6 @@
           "score_a": 0,
           "team_b": "OHIO STATE",
           "score_b": 66,
-          "markers": null,
           "note": null,
           "raw": "UM-Flint 0 @ OHIO STATE 66"
         }
@@ -670,7 +633,6 @@
           "score_a": 2,
           "team_b": "E. Michigan",
           "score_b": 0,
-          "markers": null,
           "note": "Forfeit",
           "raw": "OHIO STATE 2 @ E. Michigan 0 (Forfeit)"
         },
@@ -681,7 +643,6 @@
           "score_a": 6,
           "team_b": "OHIO STATE",
           "score_b": 32,
-          "markers": null,
           "note": null,
           "raw": "Pittsburgh 6 @ OHIO STATE 32"
         },
@@ -692,7 +653,6 @@
           "score_a": 22,
           "team_b": "Wright State",
           "score_b": 20,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 22 @ Wright State 20"
         },
@@ -703,7 +663,6 @@
           "score_a": 34,
           "team_b": "OHIO STATE",
           "score_b": 38,
-          "markers": null,
           "note": null,
           "raw": "George Mason 34 @ OHIO STATE 38"
         },
@@ -714,7 +673,6 @@
           "score_a": 29,
           "team_b": "Pittsburgh",
           "score_b": 16,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 29 @ Pittsburgh 16"
         },
@@ -725,7 +683,6 @@
           "score_a": 19,
           "team_b": "OHIO STATE",
           "score_b": 18,
-          "markers": null,
           "note": null,
           "raw": "Miami (OH) 19 @ OHIO STATE 18"
         },
@@ -736,7 +693,6 @@
           "score_a": 6,
           "team_b": "OHIO STATE",
           "score_b": 11,
-          "markers": null,
           "note": null,
           "raw": "Wright State 6 @ OHIO STATE 11"
         },
@@ -747,7 +703,6 @@
           "score_a": 16,
           "team_b": "Miami (OH)",
           "score_b": 31,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 16 @ Miami (OH) 31"
         }
@@ -763,7 +718,6 @@
           "score_a": 4,
           "team_b": "OHIO STATE",
           "score_b": 24,
-          "markers": null,
           "note": null,
           "raw": "SIUe 4 @ OHIO STATE 24"
         },
@@ -774,7 +728,6 @@
           "score_a": 34,
           "team_b": "Wright State",
           "score_b": 0,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 34 @ Wright State 0"
         },
@@ -785,7 +738,6 @@
           "score_a": 7,
           "team_b": "OHIO STATE",
           "score_b": 42,
-          "markers": null,
           "note": null,
           "raw": "Pittsburgh 7 @ OHIO STATE 42"
         },
@@ -796,7 +748,6 @@
           "score_a": 36,
           "team_b": "Miami (OH)",
           "score_b": 21,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 36 @ Miami (OH) 21"
         },
@@ -807,10 +758,7 @@
           "score_a": 17,
           "team_b": "Apprentice",
           "score_b": 56,
-          "markers": [
-            "+"
-          ],
-          "note": null,
+          "note": "NCFA National Championship Game",
           "raw": "OHIO STATE 17 vs. Apprentice 56"
         }
       ]
@@ -825,7 +773,6 @@
           "score_a": 7,
           "team_b": "OHIO STATE",
           "score_b": 41,
-          "markers": null,
           "note": null,
           "raw": "Oakland 7 @ OHIO STATE 41"
         },
@@ -836,7 +783,6 @@
           "score_a": 42,
           "team_b": "RMU-Peoria",
           "score_b": 7,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 42 @ RMU-Peoria 7"
         },
@@ -847,7 +793,6 @@
           "score_a": 0,
           "team_b": "OHIO STATE",
           "score_b": 2,
-          "markers": null,
           "note": "Forfeit",
           "raw": "Milwaukee 0 @ OHIO STATE 2"
         },
@@ -858,7 +803,6 @@
           "score_a": 41,
           "team_b": "Pittsburgh",
           "score_b": 0,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 41 @ Pittsburgh 0"
         },
@@ -869,7 +813,6 @@
           "score_a": 2,
           "team_b": "OHIO STATE",
           "score_b": 46,
-          "markers": null,
           "note": null,
           "raw": "Wright State 2 @ OHIO STATE 46"
         },
@@ -880,7 +823,6 @@
           "score_a": 8,
           "team_b": "OHIO STATE",
           "score_b": 37,
-          "markers": null,
           "note": null,
           "raw": "Miami (OH) 8 @ OHIO STATE 37"
         },
@@ -891,8 +833,7 @@
           "score_a": 0,
           "team_b": "OHIO STATE",
           "score_b": 35,
-          "markers": ["*"],
-          "note": null,
+          "note": "Forfeit",
           "raw": "Coppin State 0 @ OHIO STATE 35"
         },
         {
@@ -902,10 +843,7 @@
           "score_a": 14,
           "team_b": "OHIO STATE",
           "score_b": 17,
-          "markers": [
-            "+"
-          ],
-          "note": null,
+          "note": "NCFA National Championship Game",
           "raw": "Columbus St. (GA) 14 @ OHIO STATE 17"
         },
         {
@@ -915,10 +853,7 @@
           "score_a": 9,
           "team_b": "OHIO STATE",
           "score_b": 36,
-          "markers": [
-            "$"
-          ],
-          "note": null,
+          "note": "Special Game",
           "raw": "Oakland 9 @ OHIO STATE 36"
         }
       ]
@@ -933,7 +868,6 @@
           "score_a": 0,
           "team_b": "Mt. Union (JV)",
           "score_b": 30,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 0 @ Mt. Union (JV) 30"
         },
@@ -944,7 +878,6 @@
           "score_a": 20,
           "team_b": "Denison (JV)",
           "score_b": 28,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 20 @ Denison (JV) 28"
         },
@@ -955,7 +888,6 @@
           "score_a": 49,
           "team_b": "Oakland",
           "score_b": 0,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 49 @ Oakland 0"
         },
@@ -966,7 +898,6 @@
           "score_a": 28,
           "team_b": "OHIO STATE",
           "score_b": 29,
-          "markers": null,
           "note": null,
           "raw": "George Mason 28 @ OHIO STATE 29"
         },
@@ -977,9 +908,6 @@
           "score_a": 24,
           "team_b": "Miami (OH)",
           "score_b": 0,
-          "markers": [
-            "*"
-          ],
           "note": "Game forfeited at halftime",
           "raw": "OHIO STATE 24 @ Miami (OH) 0*"
         },
@@ -990,7 +918,6 @@
           "score_a": 14,
           "team_b": "OHIO STATE",
           "score_b": 51,
-          "markers": null,
           "note": null,
           "raw": "Toledo 14 @ OHIO STATE 51"
         },
@@ -1001,7 +928,6 @@
           "score_a": 57,
           "team_b": "Wright State",
           "score_b": 7,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 57 @ Wright State 7"
         },
@@ -1012,9 +938,6 @@
           "score_a": 12,
           "team_b": "OHIO STATE",
           "score_b": 55,
-          "markers": [
-            "^"
-          ],
           "note": "GAC Championship Game",
           "raw": "Wright State 12 @ OHIO STATE 55^"
         },
@@ -1025,33 +948,8 @@
           "score_a": 27,
           "team_b": "OHIO STATE",
           "score_b": 42,
-          "markers": [
-            "+"
-          ],
           "note": "NCFA National Championship Game",
           "raw": "George Mason 27 vs. OHIO STATE 42"
-        },
-        {
-          "outcome": null,
-          "site": "home",
-          "team_a": null,
-          "score_a": null,
-          "team_b": "(Above) Wide receiver DeShawn White hoists the 2019 NCFA National Championship trophy, the first in team history. OSU defeated Oakland, 36-9.",
-          "score_b": null,
-          "markers": null,
-          "note": null,
-          "raw": "(Above) Wide receiver DeShawn White hoists the 2019 NCFA National Championship trophy, the first in team history. OSU defeated Oakland, 36-9."
-        },
-        {
-          "outcome": null,
-          "site": "home",
-          "team_a": null,
-          "score_a": null,
-          "team_b": "(Left) Ohio State defeated George Mason in the 2021 NCFA National Championship game. The win was part of a team-record 16-game winning streak.",
-          "score_b": null,
-          "markers": null,
-          "note": null,
-          "raw": "(Left) Ohio State defeated George Mason in the 2021 NCFA National Championship game. The win was part of a team-record 16-game winning streak."
         }
       ]
     },
@@ -1065,7 +963,6 @@
           "score_a": 51,
           "team_b": "Toledo",
           "score_b": 20,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 51 @ Toledo 20"
         },
@@ -1076,7 +973,6 @@
           "score_a": 17,
           "team_b": "OHIO STATE",
           "score_b": 52,
-          "markers": null,
           "note": null,
           "raw": "Michigan State 17 @ OHIO STATE 52"
         },
@@ -1087,7 +983,6 @@
           "score_a": 2,
           "team_b": "Loyola Chicago",
           "score_b": 0,
-          "markers": null,
           "note": "Forfeit",
           "raw": "OHIO STATE 2 @ Loyola Chicago 0"
         },
@@ -1098,7 +993,6 @@
           "score_a": 53,
           "team_b": "Wright State",
           "score_b": 12,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 53 @ Wright State 12"
         },
@@ -1109,7 +1003,6 @@
           "score_a": 10,
           "team_b": "OHIO STATE",
           "score_b": 54,
-          "markers": null,
           "note": null,
           "raw": "Oakland 10 @ OHIO STATE 54"
         },
@@ -1120,7 +1013,6 @@
           "score_a": 40,
           "team_b": "Denison (JV)",
           "score_b": 21,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 40 @ Denison (JV) 21"
         },
@@ -1131,7 +1023,6 @@
           "score_a": 0,
           "team_b": "OHIO STATE",
           "score_b": 2,
-          "markers": null,
           "note": "Forfeit",
           "raw": "Miami (OH) 0 @ OHIO STATE 2 (Forfeit)"
         },
@@ -1142,9 +1033,6 @@
           "score_a": 21,
           "team_b": "OHIO STATE",
           "score_b": 59,
-          "markers": [
-            "^"
-          ],
           "note": "Great Lakes Conference Championship",
           "raw": "Michigan State 21 @ OHIO STATE 59^"
         },
@@ -1155,9 +1043,6 @@
           "score_a": 6,
           "team_b": "OHIO STATE",
           "score_b": 63,
-          "markers": [
-            "*"
-          ],
           "note": "NCFA Semifinals",
           "raw": "George Mason 6 vs. OHIO STATE 63*"
         },
@@ -1168,9 +1053,6 @@
           "score_a": 35,
           "team_b": "OHIO STATE",
           "score_b": 15,
-          "markers": [
-            "+"
-          ],
           "note": "NCFA National Championship Game",
           "raw": "Gordon State 35 vs. OHIO STATE 15"
         }
@@ -1186,7 +1068,6 @@
           "score_a": 69,
           "team_b": "Oakland",
           "score_b": 0,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 69 @ Oakland 0"
         },
@@ -1197,7 +1078,6 @@
           "score_a": 48,
           "team_b": "Wright State",
           "score_b": 0,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 48 @ Wright State 0"
         },
@@ -1208,7 +1088,6 @@
           "score_a": 0,
           "team_b": "OHIO STATE",
           "score_b": 2,
-          "markers": null,
           "note": "Forfeit",
           "raw": "Pittsburgh 0 @ OHIO STATE 2 (Forfeit)"
         },
@@ -1219,7 +1098,6 @@
           "score_a": 46,
           "team_b": "Ohio Northern JV",
           "score_b": 7,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 46 @ Ohio Northern JV 7"
         },
@@ -1230,7 +1108,6 @@
           "score_a": 30,
           "team_b": "Denison (JV)",
           "score_b": 3,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 30 @ Denison (JV) 3"
         },
@@ -1241,7 +1118,6 @@
           "score_a": 7,
           "team_b": "Wittenberg (JV) ",
           "score_b": 27,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 7 @ Wittenberg (JV) 27"
         },
@@ -1252,9 +1128,6 @@
           "score_a": 52,
           "team_b": "Michigan State",
           "score_b": 0,
-          "markers": [
-            "^"
-          ],
           "note": "Great Lakes Conference Championship",
           "raw": "OHIO STATE 52 @ Michigan State 0^"
         },
@@ -1265,9 +1138,6 @@
           "score_a": 9,
           "team_b": "OHIO STATE",
           "score_b": 43,
-          "markers": [
-            "*"
-          ],
           "note": "NCFA Semifinals",
           "raw": "Sacred Heart 9 vs. OHIO STATE 43*"
         },
@@ -1278,9 +1148,6 @@
           "score_a": 14,
           "team_b": "Central GA Tech",
           "score_b": 29,
-          "markers": [
-            "+"
-          ],
           "note": "NCFA National Championship Game",
           "raw": "OHIO STATE 14 vs. Central GA Tech 29"
         }
@@ -1296,7 +1163,6 @@
           "score_a": 20,
           "team_b": "OHIO STATE",
           "score_b": 21,
-          "markers": null,
           "note": null,
           "raw": "Cinci. United 20 @ OHIO STATE 21"
         },
@@ -1307,7 +1173,6 @@
           "score_a": 7,
           "team_b": "Ohio Northern JV",
           "score_b": 3,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 7 @ Ohio Northern JV 3"
         },
@@ -1318,7 +1183,6 @@
           "score_a": 42,
           "team_b": "Toledo",
           "score_b": 0,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 42 @ Toledo 0"
         },
@@ -1329,7 +1193,6 @@
           "score_a": 7,
           "team_b": "OHIO STATE",
           "score_b": 58,
-          "markers": null,
           "note": null,
           "raw": "Wright State 7 @ OHIO STATE 58"
         },
@@ -1340,7 +1203,6 @@
           "score_a": 91,
           "team_b": "UW-Milwaukee",
           "score_b": 0,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 91 @ UW-Milwaukee 0"
         },
@@ -1351,7 +1213,6 @@
           "score_a": 17,
           "team_b": "Ohio Wesleyan JV",
           "score_b": 14,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 17 @ Ohio Wesleyan JV 14"
         },
@@ -1362,7 +1223,6 @@
           "score_a": 10,
           "team_b": "Wittenberg JV",
           "score_b": 18,
-          "markers": null,
           "note": null,
           "raw": "OHIO STATE 10 @ Wittenberg JV 18"
         },
@@ -1373,9 +1233,6 @@
           "score_a": 0,
           "team_b": "OHIO STATE",
           "score_b": 2,
-          "markers": [
-            "^"
-          ],
           "note": "Forfeit",
           "raw": "Michigan State 0 @ OHIO STATE 2^ (Forfeit)"
         },
@@ -1386,9 +1243,6 @@
           "score_a": 0,
           "team_b": "OHIO STATE",
           "score_b": 52,
-          "markers": [
-            "*"
-          ],
           "note": "NCFA Semifinals",
           "raw": "Coppin State 0 vs. OHIO STATE 52"
         },
@@ -1399,9 +1253,6 @@
           "score_a": 13,
           "team_b": "OHIO STATE",
           "score_b": 20,
-          "markers": [
-            "+"
-          ],
           "note": "NCFA National Championship Game",
           "raw": "Clayton State 13 vs. OHIO STATE 20+"
         }
