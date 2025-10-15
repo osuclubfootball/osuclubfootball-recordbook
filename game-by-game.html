@@ -89,7 +89,7 @@
       const table = document.createElement("table");
       table.innerHTML = `
         <thead>
-          <tr><th>Result</th><th>Site</th><th>Matchup</th><th>Note</th><th>Markers</th></tr>
+          <tr><th>Result</th><th>Site</th><th>Matchup</th><th>Note</th></tr>
         </thead>
         <tbody></tbody>
       `;
@@ -97,13 +97,12 @@
       (season.games || []).forEach(g => {
         const row = parseGameRow(g);
         const tr = document.createElement("tr");
-        tr.setAttribute("data-search", `${summary.textContent} ${row.matchup} ${row.note} ${row.markers}`);
+        tr.setAttribute("data-search", `${summary.textContent} ${row.matchup} ${row.note}`);
         tr.innerHTML = `
           <td><span class="badge ${row.outcome === "W" ? "win" : row.outcome === "L" ? "loss" : "neutral"}">${safe(row.outcome)}</span></td>
           <td>${safe(row.site)}</td>
           <td>${safe(row.matchup)}</td>
           <td>${safe(row.note)}</td>
-          <td>${safe(row.markers)}</td>
         `;
         tbody.appendChild(tr);
       });
