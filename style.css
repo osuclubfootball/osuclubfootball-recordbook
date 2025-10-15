@@ -302,30 +302,35 @@ h4 {
 }
 .image-overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 0;
-  max-width: 600px;
+  width: 100%;
+  height: 100%;
   opacity: 0.7;
 }
 
 @media (max-width: 768px) {
   .image-overlay {
-    max-width: 280px;
+    width: 100%;
+    height: 100%;
   }
 }
 .image-overlay img {
   display: block;
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
 }
 
 .overlay-img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
 }
 
 .overlay-text {
@@ -379,7 +384,7 @@ h4 {
 .stat {
   color: var(--brand);
   font-weight: 900;
-  font-size: 80px;
+  font-size: 112px;
   text-align: center;
   text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
   transform: translateY(50px);
@@ -398,7 +403,7 @@ h4 {
   font-size: 16px; 
   text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
 }
-.stat.big { grid-column: 2 / 3; grid-row: 2 / 3; font-size: 64px; }
+.stat.big { grid-column: 2 / 3; grid-row: 2 / 3; font-size: 90px; }
 .stat.aa { grid-column: 1 / 2; grid-row: 1 / 2; }
 .stat.conf { grid-column: 3 / 4; grid-row: 1 / 2; }
 .stat.awards { grid-column: 1 / 2; grid-row: 3 / 4; }
@@ -410,7 +415,7 @@ h4 {
     gap: 16px;
   }
   .stat { 
-    font-size: 48px; 
+    font-size: 67px; 
     margin-bottom: 8px;
   }
   .stat span { 
@@ -420,7 +425,7 @@ h4 {
   .stat.big { 
     grid-column: auto; 
     grid-row: auto; 
-    font-size: 64px; 
+    font-size: 90px; 
   }
 }
 
