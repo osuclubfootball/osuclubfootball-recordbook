@@ -47,6 +47,39 @@
     </div>
   </footer>
 
-  <script>/* Simplified home page: static stats only */</script>
+  <script>
+    // Scroll-triggered animation for stats
+    function animateStats() {
+      const statsGrid = document.querySelector('.stats-grid');
+      const stats = document.querySelectorAll('.stat');
+      
+      // Check if stats grid is in viewport
+      const rect = statsGrid.getBoundingClientRect();
+      const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+      
+      if (isInView) {
+        // Add visible class to grid
+        statsGrid.classList.add('visible');
+        
+        // Animate individual stats with delay
+        stats.forEach((stat, index) => {
+          setTimeout(() => {
+            stat.classList.add('animate');
+          }, index * 200); // 200ms delay between each stat
+        });
+      }
+    }
+    
+    // Run animation on scroll
+    window.addEventListener('scroll', animateStats);
+    
+    // Run animation on page load in case user is already scrolled down
+    window.addEventListener('load', animateStats);
+    
+    // Run animation immediately if page is already loaded
+    if (document.readyState === 'complete') {
+      animateStats();
+    }
+  </script>
 </body>
 </html>
