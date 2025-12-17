@@ -1586,6 +1586,36 @@
   },
   "awards": [
     {
+      "title": "2025 NCFA Defensive Player of the Year",
+      "role": "Defensive End",
+      "person": "Trey Jones",
+      "narrative": " "
+    },
+    {
+      "title": "2025 NCFA Offensive Player of the Year",
+      "role": "Defensive End",
+      "person": "Matthew Humphreys",
+      "narrative": " "
+    },
+    {
+      "title": "2025 NCFA Coach of the Year",
+      "role": "Head Coach",
+      "person": "James Grega Jr.",
+      "narrative": " "
+    },
+    {
+      "title": "2025 NCFA Freshman of the Year",
+      "role": "Defensive Back",
+      "person": "Tommy Roberts III",
+      "narrative": " "
+    },
+    {
+      "title": "2025 NCFA National Championship Game MVP",
+      "role": "Wide Receiver",
+      "person": "Ricardo Washington",
+      "narrative": " "
+    },
+    {
       "title": "2024 NCFA Defensive Player of the Year",
       "role": "Defensive End",
       "person": "Matthew Humphreys",
@@ -1642,6 +1672,60 @@
   ],
   "all_americans": {
     "first_team": {
+      "2025": [
+        {
+          "name": "Niko Pappas",
+          "position": "QB"
+        },
+        {
+          "name": "Aidan Donovan",
+          "position": "TE"
+        },
+        {
+          "name": "Ricardo Washington",
+          "position": "WR"
+        },
+        {
+          "name": "DeSean Bonte",
+          "position": "WR"
+        },
+        {
+          "name": "Daniel Sankiewicz",
+          "position": "OT"
+        },
+        {
+          "name": "William Feely",
+          "position": "OG"
+        },
+        {
+          "name": "Cameron Fries",
+          "position": "C"
+        },
+        {
+          "name": "Trey Jones",
+          "position": "DE"
+        },
+        {
+          "name": "Christian Allen",
+          "position": "LB"
+        }
+        {
+          "name": "Tyler Siegel",
+          "position": "LB"
+        },
+        {
+          "name": "Tommy Roberts III",
+          "position": "DB"
+        },
+        {
+          "name": "Topaz Linton",
+          "position": "S"
+        },
+        {
+          "name": "Liam Ahern",
+          "position": "LS"
+        },
+      ],
       "2024": [
         {
           "name": "Zach Davis",
@@ -1852,6 +1936,40 @@
       ]
     },
     "second_team": {
+      "2025": [
+        {
+          "name": "Charlie Harlow",
+          "position": "WR"
+        },
+        {
+          "name": "Daniel Zirkle",
+          "position": "OT"
+        },
+        {
+          "name": "Liam Logan",
+          "position": "OG"
+        },
+        {
+          "name": "Elijah Lowden",
+          "position": "DE"
+        },
+        {
+          "name": "Tyler Beckman",
+          "position": "LB"
+        },
+        {
+          "name": "Jackson Gula",
+          "position": "S"
+        },
+        {
+          "name": "Jacob Cramer",
+          "position": "K"
+        },
+        {
+          "name": "DeSean Bonte",
+          "position": "AP"
+        }
+      ],
       "2024": [
         {
           "name": "Niko Pappas",
