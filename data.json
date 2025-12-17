@@ -2625,22 +2625,26 @@
       "Rushing Touchdowns (Game)": [
         {
           "rank": 1,
+          "text": "Niko Pappas, 5 (2021, Wright State)*"
+        },
+        {
+          "rank": 2,
           "text": "Kellyn Gerenstein, 4 (2021, Wright State)*"
         },
         {
-          "rank": 1,
+          "rank": 2,
           "text": "Kellyn Gerenstein, 4 (2022, George Mason)"
         },
         {
-          "rank": 3,
+          "rank": 4,
           "text": "Jalen Haley, 3 (2021, Wright State)*"
         },
         {
-          "rank": 3,
+          "rank": 4,
           "text": "Kellyn Gerenstein, 3 (2021, George Mason)+"
         },
         {
-          "rank": 3,
+          "rank": 4,
           "text": "Aidan Donovan, 3 (2024, Clayton State)"
         }
       ],
@@ -2917,7 +2921,57 @@
         }
       ]
     },
-    "offensive": {
+    "passing": {
+      "Passing Yards (Season)": [
+        {
+          "rank": 1,
+          "text": "Spencer Moore, 2,209 (2023)*"
+        },
+        {
+          "rank": 2,
+          "text": "Niko Pappas, 1,950 (2025)"
+        },
+        {
+          "rank": 3,
+          "text": "Kellyn Gerenstein, 1,661 (2021)"
+        }
+      ],
+      "Passing Yards (Game)": [
+        {
+          "rank": 1,
+          "text": "Spencer Moore, 350+ (2023)"
+        }
+      ],
+      "Passing Touchdowns (Season)": [
+        {
+          "rank": 1,
+          "text": "Spencer Moore, 32 (2023)*"
+        },
+        {
+          "rank": 2,
+          "text": "Niko Pappas, 25 (2025)"
+        },
+        {
+          "rank": 3,
+          "text": "Kellyn Gerenstein, 24 (2022)"
+        }
+      ],
+      "Passing Touchdowns (Game)": [
+        {
+          "rank": 1,
+          "text": "Spencer Moore, 5 (2023)"
+        },
+        {
+          "rank": 2,
+          "text": "Multiple with 4"
+        }
+      ],
+      "Completion Percentage (Season)": [
+        {
+          "rank": 1,
+          "text": "Kellyn Gerenstein, 65%+ (2019)"
+        }
+      ],
       "Total Touchdowns (Season)": [
         {
           "rank": 1,
