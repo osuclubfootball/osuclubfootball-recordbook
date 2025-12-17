@@ -2,6 +2,11 @@
   "team_records": {
     "year_by_year": [
       {
+        "year": 2025,
+        "record": "9-0",
+        "note": "NCFA Champions"
+      },
+      {
         "year": 2024,
         "record": "9-1",
         "note": "NCFA Champions"
@@ -117,46 +122,51 @@
       },
       {
         "rank": 2,
-        "text": "375 (2023)",
+        "text": "380 (2025)",
         "marker": null
       },
       {
         "rank": 3,
-        "text": "327 (2021)",
+        "text": "375 (2023)",
         "marker": null
       },
       {
         "rank": 4,
-        "text": "318 (2024)",
+        "text": "327 (2021)",
         "marker": null
       },
       {
         "rank": 5,
-        "text": "295 (2019)",
+        "text": "318 (2024)",
         "marker": null
       },
       {
         "rank": 6,
-        "text": "213 (2016)",
+        "text": "295 (2019)",
         "marker": null
       },
       {
         "rank": 7,
-        "text": "179 (2013)",
+        "text": "213 (2016)",
         "marker": null
       },
       {
         "rank": 8,
-        "text": "166 (2017)",
+        "text": "179 (2013)",
         "marker": null
       },
       {
         "rank": 9,
-        "text": "129 (2018)",
+        "text": "166 (2017)",
         "marker": null
       },
       {
         "rank": 10,
+        "text": "129 (2018)",
+        "marker": null
+      },
+      {
+        "rank": 11,
         "text": "107 (2012)",
         "marker": null
       }
@@ -167,31 +177,32 @@
         "text": "48.4, (2022)",
         "marker": null
       },
+      
       {
         "rank": 2,
-        "text": "41.6 (2023)",
+        "text": "42.2 (2025)",
         "marker": null
       },
       {
         "rank": 3,
-        "text": "36.9, (2019)",
+        "text": "41.6 (2023)",
         "marker": null
       },
       {
         "rank": 4,
-        "text": "36.3, (2021)",
+        "text": "36.9, (2019)",
         "marker": null
       },
       {
         "rank": 5,
-        "text": "35.3 (2024)",
+        "text": "36.3, (2021)",
         "marker": null
       }
     ],
     "coach_records": [
       {
         "name": "James Grega",
-        "record": "46-7",
+        "record": "55-7",
         "tenure": "2018-present"
       },
       {
@@ -1260,7 +1271,7 @@
       ]
     },
     {
-      "season_header": "2025 (TBD)",
+      "season_header": "2025 (9-0)",
       "games": [
         {
           "outcome": "W",
@@ -1303,34 +1314,54 @@
           "raw": "OHIO STATE 38 @ Ohio Wesleyan JV 21"
         },
         {
-          "outcome": "-",
+          "outcome": "W",
           "site": "away",
           "team_a": "OHIO STATE",
-          "score_a": 0,
+          "score_a": 62,
           "team_b": "Wright State",
-          "score_b": 0,
+          "score_b": 7,
           "note": null,
-          "raw": "OHIO STATE 0 @ Wright State 0"
+          "raw": "OHIO STATE 62 @ Wright State 7"
         },
         {
-          "outcome": "-",
+          "outcome": "W",
           "site": "home",
           "team_a": "OHIO STATE",
-          "score_a": 0,
+          "score_a": 58,
           "team_b": "Toledo",
-          "score_b": 0,
+          "score_b": 8,
           "note": null,
-          "raw": "OHIO STATE 0 @ Toledo 0"
+          "raw": "OHIO STATE 58 @ Toledo 8"
         },
         {
-          "outcome": "-",
+          "outcome": "W",
           "site": "home",
           "team_a": "OHIO STATE",
-          "score_a": 0,
+          "score_a": 60,
           "team_b": "Cincinnati United",
-          "score_b": 0,
+          "score_b": 6,
           "note": null,
-          "raw": "OHIO STATE 0 @ Cincinnati United 0"
+          "raw": "OHIO STATE 60 @ Cincinnati United 6"
+        },
+        {
+          "outcome": "W",
+          "site": "home",
+          "team_a": "Michigan State",
+          "score_a": 9,
+          "team_b": "OHIO STATE",
+          "score_b": 49,
+          "note": "Great Lakes Conference Championship",
+          "raw": "Michigan State 9 @ OHIO STATE 49"
+        },
+        {
+          "outcome": "W",
+          "site": "neutral",
+          "team_a": "Coppin State",
+          "score_a": 8,
+          "team_b": "OHIO STATE",
+          "score_b": 28,
+          "note": null,
+          "raw": "Coppin State 8 vs. OHIO STATE 28"
         }
       ]
     }
@@ -1353,10 +1384,10 @@
       },
       {
         "opponent": "Cincinnati United",
-        "won": 1,
+        "won": 2,
         "lost": 0,
         "first_meeting": 2024,
-        "last_meeting": 2024
+        "last_meeting": 2025
       },
       {
         "opponent": "Clayton State",
@@ -1374,17 +1405,17 @@
       },
       {
         "opponent": "Coppin State",
-        "won": 2,
+        "won": 3,
         "lost": 2,
         "first_meeting": 2012,
-        "last_meeting": 2024
+        "last_meeting": 2025
       },
       {
         "opponent": "Denison (JV)",
-        "won": 4,
+        "won": 5,
         "lost": 2,
         "first_meeting": 2012,
-        "last_meeting": 2023
+        "last_meeting": 2025
       },
       {
         "opponent": "Eastern Michigan",
@@ -1395,10 +1426,10 @@
       },
       {
         "opponent": "George Mason",
-        "won": 8,
+        "won": 9,
         "lost": 0,
         "first_meeting": 2013,
-        "last_meeting": 2022
+        "last_meeting": 2025
       },
       {
         "opponent": "Gordon State",
@@ -1437,10 +1468,10 @@
       },
       {
         "opponent": "Michigan State",
-        "won": 5,
+        "won": 7,
         "lost": 1,
         "first_meeting": 2015,
-        "last_meeting": 2024
+        "last_meeting": 2025
       },
       {
         "opponent": "Mount Union (JV)",
@@ -1472,7 +1503,7 @@
       },
       {
         "opponent": "Ohio Wesleyan (JV)",
-        "won": 2,
+        "won": 3,
         "lost": 0,
         "first_meeting": 2024,
         "last_meeting": 2025
@@ -1514,10 +1545,10 @@
       },
       {
         "opponent": "Toledo",
-        "won": 4,
+        "won": 5,
         "lost": 0,
         "first_meeting": 2021,
-        "last_meeting": 2024
+        "last_meeting": 2025
       },
       {
         "opponent": "UW-Milwaukee",
@@ -1535,10 +1566,10 @@
       },
       {
         "opponent": "Wright State",
-        "won": 13,
+        "won": 14,
         "lost": 1,
         "first_meeting": 2012,
-        "last_meeting": 2024
+        "last_meeting": 2025
       },
       {
         "opponent": "Xavier",
@@ -1549,7 +1580,7 @@
       }
     ],
     "overall": {
-      "won": 72,
+      "won": 81,
       "lost": 27
     }
   },
@@ -2572,23 +2603,23 @@
       "Rushing Touchdowns (Season)": [
         {
           "rank": 1,
-          "text": "Kellyn Gerenstein, 14 (2021)"
+          "text": "Niko Pappas, 15 (2025)"
         },
         {
           "rank": 2,
-          "text": "Kellyn Gerenstein, 13 (2022)"
+          "text": "Kellyn Gerenstein, 14 (2021)"
         },
         {
           "rank": 3,
-          "text": "Jalen Haley, 11 (2021)"
+          "text": "Kellyn Gerenstein, 13 (2022)"
         },
         {
           "rank": 4,
-          "text": "Kellyn Gerenstein, 10 (2019)"
+          "text": "Jalen Haley, 11 (2021)"
         },
         {
           "rank": 5,
-          "text": "JR Burton, 8 (2023)"
+          "text": "Kellyn Gerenstein, 10 (2019)"
         }
       ],
       "Rushing Touchdowns (Game)": [
@@ -2780,10 +2811,14 @@
         },
         {
           "rank": 3,
-          "text": "Casey Scroggins, 16.1 (2019-22)"
+          "text": "Ricardo Washington, 17.1 (2025)"
         },
         {
           "rank": 4,
+          "text": "Casey Scroggins, 16.1 (2019-22)"
+        },
+        {
+          "rank": 5,
           "text": "DeShawn White, 14.1 (2017, 2019)"
         }
       ],
@@ -2798,10 +2833,14 @@
         },
         {
           "rank": 3,
-          "text": "Abdou Keita, 9 (2022)"
+          "text": "Ricardo Washington, 11 (2025)"
         },
         {
           "rank": 4,
+          "text": "Abdou Keita, 9 (2022)"
+        },
+        {
+          "rank": 5,
           "text": "3 tied with 8"
         }
       ],
@@ -2834,7 +2873,7 @@
         },
         {
           "rank": 5,
-          "text": "Abdou Keita, 33 (2023)"
+          "text": "Ricardo Washington, 35 (2025)"
         }
       ],
       "Receptions (Game)": [
@@ -2878,27 +2917,47 @@
         }
       ]
     },
+    "offensive": {
+      "Total Touchdowns (Season)": [
+        {
+          "rank": 1,
+          "text": "Niko Pappas, 40 (2025)*"
+        },
+        {
+          "rank": 2,
+          "text": "Kellyn Gerenstein, 37 (2022)"
+        },
+        {
+          "rank": 3,
+          "text": "Spencer Moore, 36 (2023)"
+        },
+        {
+          "rank": 4,
+          "text": "Kellyn Gerenstein, 35 (2021)"
+        }
+      ]
+    },
     "defensive": {
       "Tackles (Career)": [
         {
           "rank": 1,
-          "text": "Christian Allen, 157 (2022-24)"
+          "text": "Christian Allen, 200 (2022-25)"
         },
         {
           "rank": 2,
-          "text": "Dylan Barron, 136 (2014-18, 19 games)"
+          "text": "Tyler Beckman, 161 (2023-25)"
         },
         {
           "rank": 3,
-          "text": "Chase Gasser, 133 (2017-19, 19 games)"
+          "text": "Dylan Barron, 136 (2014-18, 19 games)"
         },
         {
           "rank": 4,
-          "text": "Kody Brown, 132 (2016-17, 11 games)"
+          "text": "Chase Gasser, 133 (2017-19, 19 games)"
         },
         {
           "rank": 5,
-          "text": "Colby Stahl, 117 (2021-22, 17 games) 5t. Tyler Beckman, 117 (2023-present)"
+          "text": "Kody Brown, 132 (2016-17, 11 games)"
         }
       ],
       "Tackles (Season)": [
@@ -3006,23 +3065,23 @@
       "Sacks (Career)": [
         {
           "rank": 1,
-          "text": "Michael Fenstermaker, Jr., 22.5"
+          "text": "Trey Jones, 24.5 (2022-present)"
         },
         {
           "rank": 2,
-          "text": "Chase Gasser, 19 (2017-19)"
+          "text": "Michael Fenstermaker, Jr., 22.5"
         },
         {
           "rank": 3,
-          "text": "Trey Jones, 18 (2022-present)"
+          "text": "Chase Gasser, 19 (2017-19)"
         },
         {
           "rank": 4,
+          "text": "Matt Humphreys, 15.5 (2023-25)"
+        },
+        {
+          "rank": 5,
           "text": "Dierre Blash, 14.5 (2018-21)"
-        },
-        {
-          "rank": 4,
-          "text": "Matt Humphreys, 14.5 (2023-present)"
         }
       ],
       "Sacks (Season)": [
@@ -3131,7 +3190,12 @@
         {
           "rank": 4,
           "text": "Bobby Newby, 13 (2016-17)"
+        },
+        {
+          "rank": 4,
+          "text": "Tommy Roberts III, 13 (2025)"
         }
+
       ],
       "Pass Deflections (Game)": [
         {
@@ -3281,6 +3345,10 @@
         {
           "rank": 1,
           "text": "David Rive, 46 (2023)"
+        },
+        {
+          "rank": 2,
+          "text": "Jacob Cramer, 45 (2025)"
         },
         {
           "rank": 2,
