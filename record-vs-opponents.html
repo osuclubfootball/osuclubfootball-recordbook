@@ -22,10 +22,8 @@
         <a href="awards.html">Awards</a>
         <a href="all-americans.html">All-Americans and Captains</a>
         <a href="stats.html">Stat Leaders</a>
+        <a href="find-a-player.html">Find a Player</a>
       </nav>
-      <div class="actions">
-        <input id="globalSearch" type="search" placeholder="Search opponents..." aria-label="Search">
-      </div>
     </div>
   </header>
 
@@ -65,9 +63,6 @@
     const res = await fetch("data.json");
     if (!res.ok) throw new Error(`data.json not found (${res.status})`);
     const data = await res.json();
-    const searchBox = document.getElementById("globalSearch");
-    searchBox.addEventListener("input", () => filterable(document.body, searchBox));
-
     const rvoTbody = document.getElementById("rvoTbody");
     (data.record_vs_opponents?.rows || []).sort((a,b) => a.opponent.localeCompare(b.opponent)).forEach(r => {
       const tr = document.createElement("tr");

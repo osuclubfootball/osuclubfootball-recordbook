@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find a Player — Ohio State Club Football</title>
+  <meta name="description" content="Search for any Ohio State Club Football player across All-Americans, awards, stat leaders, and team captains.">
+  <link rel="icon" type="image/png" href="Images/2024NattyRing.png">
+  <link rel="preload" href="data.json" as="fetch" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Ohio State Club Football Record Book</h1>
+      <p class="subtitle">Find a Player</p>
+      <nav class="top-nav" aria-label="Sections">
+        <a href="index.html">Home</a>
+        <a href="team-records.html">Team Records</a>
+        <a href="game-by-game.html">Game-by-Game</a>
+        <a href="record-vs-opponents.html">Record vs. Opponents</a>
+        <a href="awards.html">Awards</a>
+        <a href="all-americans.html">All-Americans and Captains</a>
+        <a href="stats.html">Stat Leaders</a>
+        <a href="find-a-player.html" class="active">Find a Player</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="search-hero">
+      <p>Search across All-Americans, stat leaders, award winners, and team captains.</p>
+      <div class="search-wrap">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input
+          id="playerSearch"
+          class="player-search-input"
+          type="search"
+          placeholder="Search by name, position, or category…"
+          autocomplete="off"
+          autofocus
+          aria-label="Search players"
+        >
+      </div>
+    </div>
+
+    <section id="results">
+      <p class="results-count" id="resultsCount"></p>
+      <div id="resultsContainer"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Data source: <code>data.json</code></p>
+    </div>
+  </footer>
+
+  <script>
+  const safe = v => (v === null || v === undefined) ? "" : String(v);
+
+  function teamLabel(key) {
+    return { first_team: "1st Team", second_team: "2nd Team", honorable_mention: "Honorable Mention" }[key] || key;
+  }
+
+  function search(data, q) {
+    if (!q) return [];
+    const lq = q.toLowerCase();
+    const results = { aa: [], captain: [], award: [], stat: [] };
+
+    // All-Americans
+    ["first_team", "second_team", "honorable_mention"].forEach(team => {
+      Object.entries(data.all_americans?.[team] || {}).forEach(([year, entries]) => {
+        (entries || []).forEach(e => {
+          if (safe(e.name).toLowerCase().includes(lq) || safe(e.position).toLowerCase().includes(lq)) {
+            results.aa.push({ name: safe(e.name), detail: teamLabel(team), year, position: safe(e.position) });
+          }
+        });
+      });
+    });
+
+    // Academic All-Americans
+    Object.entries(data.academic_all_americans || {}).forEach(([year, entries]) => {
+      (entries || []).forEach(e => {
+        if (safe(e.name).toLowerCase().includes(lq) || safe(e.position).toLowerCase().includes(lq)) {
+          results.aa.push({ name: safe(e.name), detail: "Academic All-American", year, position: safe(e.position) });
+        }
+      });
+    });
+
+    // Team captains
+    Object.entries(data.team_captains || {}).forEach(([year, entries]) => {
+      (entries || []).forEach(e => {
+        if (safe(e.name).toLowerCase().includes(lq) || safe(e.position).toLowerCase().includes(lq)) {
+          results.captain.push({ name: safe(e.name), detail: "Team Captain", year, position: safe(e.position) });
+        }
+      });
+    });
+
+    // Awards
+    (data.awards || []).forEach(a => {
+      const haystack = [safe(a.person), safe(a.title), safe(a.role), safe(a.narrative)].join(" ").toLowerCase();
+      if (haystack.includes(lq)) {
+        results.award.push({ name: safe(a.person) || safe(a.title), detail: safe(a.title), year: "", position: safe(a.role) });
+      }
+    });
+
+    // Stat leaders
+    Object.entries(data.stats || {}).forEach(([block, subcats]) => {
+      Object.entries(subcats || {}).forEach(([sub, items]) => {
+        (items || []).forEach(item => {
+          if (safe(item.text).toLowerCase().includes(lq)) {
+            results.stat.push({ name: safe(item.text), detail: `${block} — ${sub}`, year: "", position: "", rank: item.rank });
+          }
+        });
+      });
+    });
+
+    return results;
+  }
+
+  function renderResults(results, q) {
+    const container = document.getElementById("resultsContainer");
+    const countEl   = document.getElementById("resultsCount");
+    container.innerHTML = "";
+
+    if (!q) { countEl.textContent = ""; return; }
+
+    const sections = [
+      { key: "aa",      label: "All-Americans",  cat: "cat-aa"      },
+      { key: "captain", label: "Team Captains",  cat: "cat-captain" },
+      { key: "award",   label: "Award Winners",  cat: "cat-award"   },
+      { key: "stat",    label: "Stat Leaders",   cat: "cat-stat"    },
+    ];
+
+    const total = sections.reduce((n, s) => n + results[s.key].length, 0);
+    countEl.textContent = total === 0 ? "No results found." : `${total} result${total !== 1 ? "s" : ""} found.`;
+
+    if (total === 0) {
+      container.innerHTML = `<p class="results-empty">No matches for "<strong>${q}</strong>".<br>Try a last name, position, or category.</p>`;
+      return;
+    }
+
+    sections.forEach(({ key, label, cat }) => {
+      const items = results[key];
+      if (!items.length) return;
+
+      const group = document.createElement("div");
+      group.className = "result-group";
+
+      const title = document.createElement("p");
+      title.className = "result-group-title";
+      title.textContent = `${label} (${items.length})`;
+      group.appendChild(title);
+
+      const list = document.createElement("div");
+      list.className = "result-list";
+
+      items.forEach(item => {
+        const row = document.createElement("div");
+        row.className = "result-item";
+
+        const catBadge = `<span class="result-cat ${cat}">${label.replace(" Winners","").replace(" Leaders","")}</span>`;
+        const yearStr  = item.year ? `<span class="result-year">${item.year}</span>` : "";
+        const pos      = item.position ? ` · ${item.position}` : "";
+        const detail   = item.detail ? `<span class="result-detail">${item.detail}${pos}</span>` : "";
+
+        row.innerHTML = `
+          ${catBadge}
+          <span class="result-name">${item.name}</span>
+          ${detail}
+          ${yearStr}
+        `;
+        list.appendChild(row);
+      });
+
+      group.appendChild(list);
+      container.appendChild(group);
+    });
+  }
+
+  async function init() {
+    const res = await fetch("data.json");
+    if (!res.ok) throw new Error(`data.json not found (${res.status})`);
+    const data = await res.json();
+
+    const input = document.getElementById("playerSearch");
+    let debounce;
+    input.addEventListener("input", () => {
+      clearTimeout(debounce);
+      debounce = setTimeout(() => {
+        const q = input.value.trim();
+        renderResults(search(data, q), q);
+      }, 120);
+    });
+  }
+
+  init().catch(err => {
+    console.error(err);
+    document.getElementById("resultsContainer").innerHTML =
+      `<pre class="error">Failed to load data.\n${err}</pre>`;
+  });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
