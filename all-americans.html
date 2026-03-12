@@ -61,13 +61,6 @@
 
   <script>
   const safe = v => (v === null || v === undefined) ? "" : v;
-  const filterable = (root, input) => {
-    const q = input.value.trim().toLowerCase();
-    root.querySelectorAll("[data-search]").forEach(el => {
-      const text = el.getAttribute("data-search") || el.textContent || "";
-      el.style.display = text.toLowerCase().includes(q) ? "" : "none";
-    });
-  };
   const renderAllAmericans = (container, dict) => {
     container.innerHTML = "";
     Object.keys(dict).sort().forEach(year => {
@@ -91,8 +84,8 @@
   };
   async function init() {
     const res = await fetch("data.json");
+    if (!res.ok) throw new Error(`data.json not found (${res.status})`);
     const data = await res.json();
-    
 
     renderAllAmericans(document.getElementById("aaFirst"), data.all_americans?.first_team || {});
     renderAllAmericans(document.getElementById("aaSecond"), data.all_americans?.second_team || {});

@@ -63,7 +63,7 @@
     const right = bTeam && bScore !== "" ? `${bTeam} ${bScore}` : bTeam || "";
     let matchup = "";
     if (left && right) {
-      const sep = site === "neutral" ? "vs." : (site === "away" ? "@" : "@");
+      const sep = site === "neutral" ? "vs." : (site === "away" ? "@" : "vs.");
       matchup = `${left} ${sep} ${right}`;
     } else if (raw) {
       matchup = raw;
@@ -74,8 +74,8 @@
   };
   async function init() {
     const res = await fetch("data.json");
+    if (!res.ok) throw new Error(`data.json not found (${res.status})`);
     const data = await res.json();
-    
 
     const gbgContainer = document.getElementById("gbgContainer");
     (data.game_by_game || []).forEach(season => {

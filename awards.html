@@ -42,17 +42,10 @@
 
   <script>
   const safe = v => (v === null || v === undefined) ? "" : v;
-  const filterable = (root, input) => {
-    const q = input.value.trim().toLowerCase();
-    root.querySelectorAll("[data-search]").forEach(el => {
-      const text = el.getAttribute("data-search") || el.textContent || "";
-      el.style.display = text.toLowerCase().includes(q) ? "" : "none";
-    });
-  };
   async function init() {
     const res = await fetch("data.json");
+    if (!res.ok) throw new Error(`data.json not found (${res.status})`);
     const data = await res.json();
-    
 
     const awardsCards = document.getElementById("awardsCards");
     (data.awards || []).forEach(a => {
