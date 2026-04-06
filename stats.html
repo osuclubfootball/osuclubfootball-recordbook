@@ -64,7 +64,6 @@
     });
     return card;
   };
-  // Enhanced search: matches player names within item.text or category names
   function renderStats(stats, query) {
     const grid = document.getElementById("statsGrid");
     grid.innerHTML = "";
@@ -77,7 +76,6 @@
 
     Object.keys(stats).forEach(block => {
       const subcats = stats[block] || {};
-      // If filtering by category, allow matching block or subcat names
       const blockMatches = q && block.toLowerCase().includes(q);
       const filtered = {};
       Object.keys(subcats).forEach(sub => {
@@ -105,5 +103,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-

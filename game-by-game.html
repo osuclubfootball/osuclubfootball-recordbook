@@ -30,29 +30,28 @@
   <main class="container">
     <section id="game-by-game" aria-labelledby="gbg-title">
       <h2 id="gbg-title">Game-by-Game Results</h2>
-      <div class="photo-section">
-        <p class="photo-section-title">Season Highlights</p>
-        <div class="photo-grid">
-          <div class="photo-card landscape">
-            <img src="Images/2021NattyChamps.png" alt="2021 National Champions">
-            <div class="photo-card-label">2021 National Champions</div>
-          </div>
-          <div class="photo-card landscape">
-            <img src="Images/2023Denison.png" alt="2023 vs. Denison">
-            <div class="photo-card-label">2023 vs. Denison</div>
-          </div>
-          <div class="photo-card landscape">
-            <img src="Images/2023Defense1.png" alt="2023 Defense">
-            <div class="photo-card-label">2023 Defense</div>
-          </div>
-          <div class="photo-card landscape">
-            <img src="Images/2023Defense2.png" alt="2023 Defense">
-            <div class="photo-card-label">2023 Defense</div>
-          </div>
-        </div>
+
+      <div class="inline-photo">
+        <img src="Images/2021NattyChamps.png" alt="2021 National Champions">
       </div>
 
       <div id="gbgContainer" class="accordion"></div>
+
+      <div class="inline-photo">
+        <img src="Images/2023Denison.png" alt="2023 vs. Denison">
+      </div>
+
+      <div id="gbgContainer2" class="accordion"></div>
+
+      <div class="inline-photo">
+        <img src="Images/2023Defense1.png" alt="2023 Defense">
+      </div>
+
+      <div id="gbgContainer3" class="accordion"></div>
+
+      <div class="inline-photo">
+        <img src="Images/2023Defense2.png" alt="2023 Defense">
+      </div>
     </section>
   </main>
 
@@ -64,13 +63,6 @@
 
   <script>
   const safe = v => (v === null || v === undefined) ? "" : v;
-  const filterable = (root, input) => {
-    const q = input.value.trim().toLowerCase();
-    root.querySelectorAll("[data-search]").forEach(el => {
-      const text = el.getAttribute("data-search") || el.textContent || "";
-      el.style.display = text.toLowerCase().includes(q) ? "" : "none";
-    });
-  };
   const parseGameRow = g => {
     const outcome = safe(g.outcome);
     const site = safe(g.site);
@@ -99,10 +91,24 @@
     if (!res.ok) throw new Error(`data.json not found (${res.status})`);
     const data = await res.json();
 
-    const gbgContainer = document.getElementById("gbgContainer");
-    (data.game_by_game || []).forEach(season => {
+    // Reverse: most recent season first
+    const seasons = (data.game_by_game || []).slice().reverse();
+
+    // Split seasons into 3 groups for interspersing with photos
+    const groupSize = Math.ceil(seasons.length / 3);
+    const containers = [
+      document.getElementById("gbgContainer"),
+      document.getElementById("gbgContainer2"),
+      document.getElementById("gbgContainer3")
+    ];
+
+    seasons.forEach((season, i) => {
+      const containerIdx = Math.min(Math.floor(i / groupSize), 2);
+      const container = containers[containerIdx];
+
       const details = document.createElement("details");
       details.className = "card";
+      if (i === 0) details.open = true;
       const summary = document.createElement("summary");
       summary.textContent = season.season_header || "Season";
       details.appendChild(summary);
@@ -130,7 +136,7 @@
       });
       tblWrap.appendChild(table);
       details.appendChild(tblWrap);
-      gbgContainer.appendChild(details);
+      container.appendChild(details);
     });
   }
   init().catch(err => {
@@ -141,5 +147,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-

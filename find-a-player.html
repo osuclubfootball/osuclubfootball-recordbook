@@ -70,7 +70,6 @@
     const lq = q.toLowerCase();
     const results = { aa: [], captain: [], award: [], stat: [] };
 
-    // All-Americans
     ["first_team", "second_team", "honorable_mention"].forEach(team => {
       Object.entries(data.all_americans?.[team] || {}).forEach(([year, entries]) => {
         (entries || []).forEach(e => {
@@ -81,7 +80,6 @@
       });
     });
 
-    // Academic All-Americans
     Object.entries(data.academic_all_americans || {}).forEach(([year, entries]) => {
       (entries || []).forEach(e => {
         if (safe(e.name).toLowerCase().includes(lq) || safe(e.position).toLowerCase().includes(lq)) {
@@ -90,7 +88,6 @@
       });
     });
 
-    // Team captains
     Object.entries(data.team_captains || {}).forEach(([year, entries]) => {
       (entries || []).forEach(e => {
         if (safe(e.name).toLowerCase().includes(lq) || safe(e.position).toLowerCase().includes(lq)) {
@@ -99,7 +96,6 @@
       });
     });
 
-    // Awards
     (data.awards || []).forEach(a => {
       const haystack = [safe(a.person), safe(a.title), safe(a.role), safe(a.narrative)].join(" ").toLowerCase();
       if (haystack.includes(lq)) {
@@ -107,7 +103,6 @@
       }
     });
 
-    // Stat leaders
     Object.entries(data.stats || {}).forEach(([block, subcats]) => {
       Object.entries(subcats || {}).forEach(([sub, items]) => {
         (items || []).forEach(item => {
